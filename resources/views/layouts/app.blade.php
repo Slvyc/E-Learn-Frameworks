@@ -10,9 +10,9 @@
 </head>
 
 <body>
-    <div class="bg-white">
+    <div class="bg-[#141414]">
         {{-- navbar start --}}
-        <header class="absolute inset-x-0 top-0 z-50">
+        <header class="fixed inset-x-0 top-0 z-50 bg-[#141414]">
             <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
                 <div class="flex lg:flex-1">
                     <a href="#" class="-m-1.5 p-1.5">
@@ -33,13 +33,13 @@
                     </button>
                 </div>
                 <div class="hidden lg:flex lg:gap-x-12">
-                    <a href="{{ route('home') }}" class="text-sm/6 font-semibold text-gray-900">Home</a>
-                    <a href="#" class="text-sm/6 font-semibold text-gray-900">Frameworks</a>
-                    <a href="{{ route('about') }}" class="text-sm/6 font-semibold text-gray-900">About</a>
-                    <a href="{{ route("contact")}}" class="text-sm/6 font-semibold text-gray-900">Contact</a>
+                    <a href="{{ route('home') }}" class="text-sm/6 font-semibold text-white">Home</a>
+                    <a href="#" class="text-sm/6 font-semibold text-white">Frameworks</a>
+                    <a href="{{ route('about') }}" class="text-sm/6 font-semibold text-white">About</a>
+                    <a href="{{ route("contact")}}" class="text-sm/6 font-semibold text-white">Contact</a>
                 </div>
                 <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-                    <a href="#" class="text-sm/6 font-semibold text-gray-900">Log in / Sign Up<span
+                    <a href="#" class="bg-[#b9ff66] hover:bg-[#b9ff66]/50 text-black text-sm/6 font-medium px-3 py-2 rounded-[40px] shadow transition duration-300">Log in / Sign Up<span
                             aria-hidden="true">&rarr;</span></a>
                 </div>
             </nav>
@@ -90,7 +90,7 @@
         {{-- navbar end --}}
 
         {{-- content start --}}
-        <div class="relative isolate px-6 pt-14 lg:px-8">
+        <div class="relative">
             @yield('content')
         </div>
         {{-- content end --}}
