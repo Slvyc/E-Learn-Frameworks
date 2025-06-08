@@ -1,38 +1,151 @@
 @extends('layouts.app')
 
 @section('content')
-    <!-- SECTION HERO -->
-    <section class="w-full h-[400px] relative overflow-hidden">
-        <!-- Background fixed ga gerak -->
-        <div class="fixed top-0 left-0 w-full h-[400px] z-0">
-            <img src="{{ asset('images/bg-tools.jpeg') }}"
-            class="w-full h-full object-cover opacity-30" />
-            <div class="absolute inset-0 bg-gradient-to-r from-black to-white/20"></div>
-        </div>
+  <!-- SECTION HERO -->
+  <section class="w-full h-[350px] relative overflow-hidden">
+    <!-- Background fixed ga gerak -->
+    <div class="fixed top-0 left-0 w-full h-[400px] z-0">
+    <img src="{{ asset('images/bg-tools.jpeg') }}" class="w-full h-full object-cover opacity-30" />
+    <div class="absolute inset-0 bg-gradient-to-r from-black to-white/20"></div>
+    </div>
 
-        <!-- hero teks -->
-        <div class="relative z-10 flex flex-col items-start justify-center h-full px-10 text-left">
-            <h1 class="text-white text-4xl md:text-5xl font-bold max-w-xl">
-                Find the Right Tools to <br class="hidden md:block" />
-                Learn Coding...
-            </h1>
+    <!-- hero teks -->
+    <div class="relative z-10 flex flex-col items-start justify-center h-full px-10 text-left">
+    <h1 class="text-white text-4xl md:text-5xl font-bold max-w-xl">
+      Find the Right Tools to <br class="hidden md:block" />
+      Learn Coding...
+    </h1>
+    </div>
+  </section>
+
+  <!-- SECTION BAWAH -->
+  <section class="relative z-20 bg-[#141414] py-16 mt-5">
+    <div class="max-w-xl mx-auto px-6 text-center text-white">
+    <p class="text-base md:text-md text-white">
+      Kami kumpulkan berbagai framework e-learning khusus untuk belajar coding, lengkap dengan fitur interaktif
+      yang bikin proses belajar jadi lebih mudah dan menyenangkan.
+    </p>
+
+    <div class="mt-10 mb-20">
+      <a href="#how-to-use"
+      class="bg-[#b9ff66] hover:bg-[#b9ff66]/20 text-black text-sm/6 font-semibold px-5 py-2 rounded-[10px] shadow transition duration-300">
+      View How to use
+      </a>
+    </div>
+    </div>
+
+    <!-- popular card -->
+    <section class="bg-[#141414] py-16 px-6 text-white">
+    <div class="max-w-screen-xl mx-auto">
+      <h2 class="text-3xl font-bold mb-15">Popular Framework</h2>
+      <div class="grid grid-cols-3 md:grid-cols-3 items-center gap-10">
+      <!-- Card 1 -->
+      <a href="#" class="flex flex-col items-center text-center">
+        <div class="bg-white rounded-xl w-full h-60 flex items-center justify-center">
+        <img src="{{ asset('images/bg-tools1.png') }}" alt="Laravel" class="h-60 rounded-xl">
         </div>
+        <h3 class="text-lg font-semibold mt-4">Laravel</h3>
+        <p class="text-sm text-gray-400 max-w-xs mt-2">
+        Body text for whatever you'd like to add more to the subheading.
+        </p>
+      </a>
+
+      <!-- Card 2 -->
+      <a href="#" class="flex flex-col items-center text-center">
+        <div class="bg-white rounded-xl w-full h-60 flex items-center justify-center">
+        <img src="{{ asset('images/bg-tools1.png') }}" alt="Node.js" class="h-60 rounded-xl">
+        </div>
+        <h3 class="text-lg font-semibold mt-4">Node.js</h3>
+        <p class="text-sm text-gray-400 max-w-xs mt-2">
+        Body text for whatever you'd like to expand on the main point.
+        </p>
+      </a>
+
+      <!-- Card 3 -->
+      <a href="#" class="flex flex-col items-center text-center">
+        <div class="bg-white rounded-xl w-full h-60 flex items-center justify-center">
+        <img src="{{ asset('images/bg-tools1.png') }}" alt="Tailwind CSS" class="h-60 rounded-xl">
+        </div>
+        <h3 class="text-lg font-semibold mt-4">Tailwind css</h3>
+        <p class="text-sm text-gray-400 max-w-xs mt-2">
+        Body text for whatever you'd like to share more.
+        </p>
+      </a>
+      </div>
+    </div>
     </section>
 
-    <!-- SECTION BAWAH -->
-    <section class="relative z-20 bg-[#141414] py-16">
-        <div class="max-w-xl mx-auto px-6 text-center text-white">
-            <p class="text-base md:text-lg text-gray-300">
-                Kami kumpulkan berbagai framework e-learning khusus untuk belajar coding, lengkap dengan fitur interaktif
-                yang bikin proses belajar jadi lebih mudah dan menyenangkan.
-            </p>
 
-            <div class="mt-10">
-                <a href="#"
-                   class="bg-[#b9ff66] hover:bg-[#b9ff66] text-gray-900 font-semibold px-5 py-2.5 rounded-md shadow transition duration-300">
-                    View How to use
-                </a>
-            </div>
+    <!-- how to use 2 -->
+    <section id="how-to-use" class="bg-[#141414] py-16 px-6 text-white">
+    <div class="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
+
+      <!-- kiri -->
+      <div class="flex text-center flex-col justify-center h-full">
+      <h2 class="text-3xl font-bold mb-7">How to Use This Website to Learn?</h2>
+      <p class="felx text-center md:text-md text-gray-300 md:px-30">
+        Panduan langkah demi langkah untuk membantu kamu memilih dan mempelajari framework coding dari
+        katalog kami.
+      </p>
+      </div>
+
+      <!-- kanan -->
+      <div class="flex flex-col justify-center space-y-10">
+
+      <!-- Langkah 1 -->
+      <div class="bg-[#b9ff66] text-black p-8 rounded-xl flex space-x-10">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-20 h-20" fill="none" viewBox="0 0 24 24"
+        stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M21 21l-4.35-4.35M17 11a6 6 0 11-12 0 6 6 0 0112 0z" />
+        </svg>
+        <div class="w-[4px] bg-black opacity-90"></div>
+        <div>
+        <h3 class="text-xl font-semibold mb-2">Jelajahi Framework</h3>
+        <p class="text-sm">Cari framework belajar coding yang sesuai dari katalog kami, seperti Laravel,
+          Node.js, atau Replit Teams.</p>
         </div>
+      </div>
+
+      <!-- Langkah 2 -->
+      <div class="bg-[#b9ff66] text-black p-8 rounded-xl flex space-x-10">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-20 h-20" fill="none" viewBox="0 0 24 24"
+        stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M7 8h10M7 12h10M7 16h10M5 4h14a2 2 0 012 2v12a2 2 0 01-2 2H5a2 2 0 01-2-2V6a2 2 0 012-2z" />
+        </svg>
+        <div class="w-[4px] bg-black opacity-90"></div>
+        <div>
+        <h3 class="text-xl font-semibold mb-2">Baca Detail & Fitur</h3>
+        <p class="text-sm">Setiap framework punya halaman khusus berisi fitur, keunggulan, dan demo
+          penggunaannya.</p>
+        </div>
+      </div>
+
+      <!-- Langkah 3 -->
+      <div class="bg-[#b9ff66] text-black p-8 rounded-xl flex space-x-10">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-20 h-20" fill="none" viewBox="0 0 24 24"
+        stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+        </svg>
+        <div class="w-[4px] bg-black opacity-90"></div>
+        <div>
+        <h3 class="text-xl font-semibold mb-2">Bandingkan & Pilih</h3>
+        <p class="text-sm">Gunakan fitur pencarian dan filter untuk membandingkan framework secara
+          cepat.</p>
+        </div>
+      </div>
+
+      <!-- button get Started -->
+      <div class="text-center mt-4">
+        <a href="#get-started"
+        class="bg-[#b9ff66] hover:bg-[#b9ff66]/20 text-black text-sm/6 font-semibold px-5 py-2 rounded-[10px] shadow transition duration-300">
+        Get Started
+        </a>
+      </div>
+      </div>
+    </div>
     </section>
+
+  </section>
 @endsection
