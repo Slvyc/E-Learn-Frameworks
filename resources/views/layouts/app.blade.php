@@ -37,10 +37,30 @@
                 <a href="{{ route('about') }}" class="text-sm/6 font-semibold text-white">About</a>
                 <a href="{{ route("contact")}}" class="text-sm/6 font-semibold text-white">Contact</a>
             </div>
+            {{-- cek apakah sudah login  --}}
             <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-                <a href="#"
-                    class="bg-[#b9ff66] hover:bg-[#b9ff66]/50 text-black text-sm/6 font-medium px-3 py-1 rounded-[40px] shadow transition duration-300">Log
-                    in / Sign Up<span aria-hidden="true">&rarr;</span></a>
+                @auth
+                    <span class="inline-block bg-gradient-to-r from-[#b9ff66] to-[#98d454] text-black text-sm font-semibold px-3 py-1 rounded-[40px] mr-2">
+                        👋 Hello, {{ Auth::user()->name }}
+                    </span>
+                    {{-- <form method="POST" action="{{ route('logout') }}" class="inline">
+                        @csrf
+                        <button type="submit" class="bg-red-500 text-white px-3 py-1 rounded">Logout</button>
+                    </form> --}}
+                    <form method="POST" action="{{ route('logout') }}">
+                        @csrf
+                        <button type="submit" class="bg-[#b9ff66] hover:bg-[#b9ff66]/50 text-black text-sm/6 font-medium px-3 py-1 rounded-[40px] shadow transition duration-300">
+                            Logout<span aria-hidden="true"></span>
+                        </button>
+                    </form>
+                @else
+                    <a href="{{ route('login') }}"
+                        class="bg-[#b9ff66] hover:bg-[#b9ff66]/50 text-black text-sm/6 font-medium px-3 py-1 rounded-[40px] shadow transition duration-300 mr-2">
+                        Login<span aria-hidden="true"></span></a>
+                    <a href="{{ route('register') }}"
+                        class="bg-[#b9ff66] hover:bg-[#b9ff66]/50 text-black text-sm/6 font-medium px-3 py-1 rounded-[40px] shadow transition duration-300">
+                        Sign Up<span aria-hidden="true">&rarr;</span></a>
+                @endauth
             </div>
         </nav>
 
