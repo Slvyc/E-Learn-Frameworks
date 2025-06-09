@@ -37,6 +37,7 @@
                 <a href="{{ route('about') }}" class="text-sm/6 font-semibold text-white">About</a>
                 <a href="{{ route("contact")}}" class="text-sm/6 font-semibold text-white">Contact</a>
                 <a href="{{ route("laravelTutorial")}}" class="text-sm/6 font-semibold text-white">Laravel</a>
+                <a href="{{ route("instalationLaravel")}}" class="text-sm/6 font-semibold text-white">Laravel</a>
             </div>
             {{-- cek apakah sudah login --}}
             <div class="hidden lg:flex lg:flex-1 lg:justify-end">
