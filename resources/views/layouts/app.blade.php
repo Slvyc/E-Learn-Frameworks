@@ -36,11 +36,13 @@
                 <a href="{{ route('framework') }}" class="text-sm/6 font-semibold text-white">Frameworks</a>
                 <a href="{{ route('about') }}" class="text-sm/6 font-semibold text-white">About</a>
                 <a href="{{ route("contact")}}" class="text-sm/6 font-semibold text-white">Contact</a>
+                <a href="{{ route("laravelTutorial")}}" class="text-sm/6 font-semibold text-white">Laravel</a>
             </div>
-            {{-- cek apakah sudah login  --}}
+            {{-- cek apakah sudah login --}}
             <div class="hidden lg:flex lg:flex-1 lg:justify-end">
                 @auth
-                    <span class="inline-block bg-gradient-to-r from-[#b9ff66] to-[#98d454] text-black text-sm font-semibold px-3 py-1 rounded-[40px] mr-2">
+                    <span
+                        class="inline-block bg-gradient-to-r from-[#b9ff66] to-[#98d454] text-black text-sm font-semibold px-3 py-1 rounded-[40px] mr-2">
                         👋 Hello, {{ Auth::user()->name }}
                     </span>
                     {{-- <form method="POST" action="{{ route('logout') }}" class="inline">
@@ -49,7 +51,8 @@
                     </form> --}}
                     <form method="POST" action="{{ route('logout') }}">
                         @csrf
-                        <button type="submit" class="bg-[#b9ff66] hover:bg-[#b9ff66]/50 text-black text-sm/6 font-medium px-3 py-1 rounded-[40px] shadow transition duration-300">
+                        <button type="submit"
+                            class="bg-[#b9ff66] hover:bg-[#b9ff66]/50 text-black text-sm/6 font-medium px-3 py-1 rounded-[40px] shadow transition duration-300">
                             Logout<span aria-hidden="true"></span>
                         </button>
                     </form>

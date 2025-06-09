@@ -1,0 +1,128 @@
+@extends('layouts.app')
+
+@section('content')
+    <!-- SECTION HERO -->
+    <section class="w-full h-[350px] relative overflow-hidden">
+        <!-- Background fixed ga gerak -->
+        <div class="fixed top-0 left-0 w-full h-[350px] z-0">
+            <img src="{{ asset('images/bg-tools.jpeg') }}" class=" w-full h-full object-cover opacity-30" />
+            <div class="absolute inset-0 bg-gradient-to-r from-black to-white/20"></div>
+        </div>
+
+        <div class="relative z-10 flex flex-col items-start justify-center h-full pl-78 mt-8 text-left">
+            <h1 class="text-white text-4xl md:text-5xl font-bold max-w-xl">
+                Laravel Tutorial
+            </h1>
+        </div>
+    </section>
+
+    <!-- sidebar -->
+    <aside class="fixed top-20 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0">
+        <div class="h-full py-4 overflow-y-auto bg-[#414141]">
+            <a href="#" class="flex items-center ps-5">
+                <span class="self-center text-xl font-bold whitespace-nowrap dark:text-white">Laravel Chapters</span>
+            </a>
+            <ul class="space-y-2 font-normal mt-5">
+                <li>
+                    <a href="#" class="flex items-center w-full p-1 text-gray-900 dark:text-white hover:bg-[#b9ff66] group">
+                        <svg class="w-5 h-5 ml-3 text-gray-400 group-hover:text-black group" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 20">
+                            <path
+                                d="M16 14V2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v15a3 3 0 0 0 3 3h12a1 1 0 0 0 0-2h-1v-2a2 2 0 0 0 2-2ZM4 2h2v12H4V2Zm8 16H3a1 1 0 0 1 0-2h9v2Z" />
+                        </svg>
+                        <span class="ms-3 group-hover:text-black group">Chapter 1. Introdution</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="flex items-center p-1 text-gray-900 dark:text-white hover:bg-[#b9ff66] group">
+                        <svg class="w-5 h-5 ml-3 text-gray-400 group-hover:text-black" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 20">
+                            <path
+                                d="M16 14V2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v15a3 3 0 0 0 3 3h12a1 1 0 0 0 0-2h-1v-2a2 2 0 0 0 2-2ZM4 2h2v12H4V2Zm8 16H3a1 1 0 0 1 0-2h9v2Z" />
+                        </svg>
+                        <span class="ms-3 group-hover:text-black">Chapter 2. MVC</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="flex items-center p-1 text-gray-900 dark:text-white hover:bg-[#b9ff66] group">
+                        <svg class="w-5 h-5 ml-3 text-gray-400 group-hover:text-black" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 20">
+                            <path
+                                d="M16 14V2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v15a3 3 0 0 0 3 3h12a1 1 0 0 0 0-2h-1v-2a2 2 0 0 0 2-2ZM4 2h2v12H4V2Zm8 16H3a1 1 0 0 1 0-2h9v2Z" />
+                        </svg>
+                        <span class="ms-3 group-hover:text-black">Chapter 3. Instalation</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="flex items-center p-1 text-gray-900 dark:text-white hover:bg-[#b9ff66] group">
+                        <svg class="w-5 h-5 ml-3 text-gray-400 group-hover:text-black" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 20">
+                            <path
+                                d="M16 14V2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v15a3 3 0 0 0 3 3h12a1 1 0 0 0 0-2h-1v-2a2 2 0 0 0 2-2ZM4 2h2v12H4V2Zm8 16H3a1 1 0 0 1 0-2h9v2Z" />
+                        </svg>
+                        <span class="ms-3 group-hover:text-black">Chapter 4. Examples</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </aside>
+
+    <!-- Main -->
+    <main class="relative z-20 bg-[#141414] pl-64">
+        <div class="max-w-screen-xl mx-auto px-15 py-10 text-white space-y-8">
+            <h1 class="text-3xl font-semibold">Laravel Introduction</h1>
+            <div class="flex justify-between items-center -mt-2">
+                <a href="#"
+                    class="text-sm px-4 py-1.5 bg-[#b9ff66] hover:bg-[#b9ff66]/50 text-black rounded-full font-semibold flex items-center gap-1">
+                    ← Previous
+                </a>
+                <a href="#"
+                    class="text-sm px-4 py-1.5 bg-[#b9ff66] hover:bg-[#b9ff66]/50 text-black rounded-full font-semibold flex items-center gap-1">
+                    Next →
+                </a>
+            </div>
+
+            <section id="laravel" class="space-y-6 text-gray-300 leading-relaxed">
+                <h2 class="text-[#b9ff66] text-xl font-semibold"># Laravel</h2>
+                <p>
+                    Laravel is a web application framework with expressive, elegant syntax.
+                    A web framework provides a structure and starting point for creating your application,
+                    allowing you to focus on creating something amazing while we sweat the details.
+                </p>
+                <p>
+                    Laravel strives to provide an amazing developer experience while providing powerful features
+                    such as thorough dependency injection, an expressive database abstraction layer,
+                    queues and scheduled jobs, unit and integration testing, and more.
+                </p>
+                <p>
+                    Whether you are new to PHP web frameworks or have years of experience,
+                    Laravel is a framework that can grow with you.
+                    We'll help you take your first steps as a web developer or give you a boost
+                    as you take your expertise to the next level.
+                </p>
+            </section>
+
+            <section id="why-laravel" class="space-y-6 text-gray-300 leading-relaxed">
+                <h2 class="text-[#b9ff66] text-xl font-semibold"># Why Laravel</h2>
+                <p>
+                    There are a variety of tools and frameworks available to you when building a web application.
+                    However, we believe Laravel is the best choice for building modern, full-stack web applications.
+                </p>
+                <p>
+                    <strong>A Progressive Framework</strong><br>
+                    We like to call Laravel a "progressive" framework. By that, we mean that Laravel grows with you.
+                    If you're just taking your first steps into web development, Laravel’s vast library of documentation,
+                    guides, and <a href="#" class="underline text-blue-400 hover:text-blue-300">video tutorials</a> will
+                    help you learn the ropes without becoming overwhelmed.
+                </p>
+                <p>
+                    If you're a senior developer, Laravel gives you robust tools for
+                    <a href="#" class="underline text-blue-400 hover:text-blue-300">dependency injection</a>,
+                    <a href="#" class="underline text-blue-400 hover:text-blue-300">unit testing</a>,
+                    <a href="#" class="underline text-blue-400 hover:text-blue-300">queues</a>,
+                    <a href="#" class="underline text-blue-400 hover:text-blue-300">real-time events</a>, and more.
+                </p>
+            </section>
+        </div>
+    </main>
+@endsection
