@@ -17,60 +17,40 @@
 </section>
 
 <!-- sidebar -->
-<aside class="fixed top-20 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0">
-    <div class="h-full py-4 overflow-y-auto bg-[#414141]">
-        <a href="#" class="flex items-center ps-5">
-            <span class="self-center text-xl font-bold whitespace-nowrap dark:text-white">Laravel Chapters</span>
-        </a>
-        <ul class="space-y-2 mt-5">
-            <li>
-                <a href="#" class="flex items-center w-full p-1 text-gray-900 dark:text-white hover:bg-[#b9ff66] group">
-                    <svg class="w-5 h-5 ml-3 text-gray-400 group-hover:text-black group" aria-hidden="true"
-                        xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 20">
-                        <path
-                            d="M16 14V2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v15a3 3 0 0 0 3 3h12a1 1 0 0 0 0-2h-1v-2a2 2 0 0 0 2-2ZM4 2h2v12H4V2Zm8 16H3a1 1 0 0 1 0-2h9v2Z" />
-                    </svg>
-                    <span class="ms-3 group-hover:text-black group">
-                        <span class="font-bold">Chapter 1.</span>&nbsp;Introduction
-                    </span>
-                </a>
-            </li>
-            <li>
-                <a href="#" class="flex items-center p-1 text-gray-900 dark:text-white hover:bg-[#b9ff66] group">
-                    <svg class="w-5 h-5 ml-3 text-gray-400 group-hover:text-black" aria-hidden="true"
-                        xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 20">
-                        <path
-                            d="M16 14V2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v15a3 3 0 0 0 3 3h12a1 1 0 0 0 0-2h-1v-2a2 2 0 0 0 2-2ZM4 2h2v12H4V2Zm8 16H3a1 1 0 0 1 0-2h9v2Z" />
-                    </svg>
-                    <span class="ms-3 group-hover:text-black group">
-                        <span class="font-bold">Chapter 2.</span>&nbsp;MVC</span>
-                </a>
-            </li>
-            <li>
-                <a href="#" class="flex items-center p-1 text-gray-900 dark:text-white hover:bg-[#b9ff66] group">
-                    <svg class="w-5 h-5 ml-3 text-gray-400 group-hover:text-black" aria-hidden="true"
-                        xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 20">
-                        <path
-                            d="M16 14V2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v15a3 3 0 0 0 3 3h12a1 1 0 0 0 0-2h-1v-2a2 2 0 0 0 2-2ZM4 2h2v12H4V2Zm8 16H3a1 1 0 0 1 0-2h9v2Z" />
-                    </svg>
-                    <span class="ms-3 group-hover:text-black group">
-                        <span class="font-bold">Chapter 3.</span>&nbsp;Instalation</span>
-                </a>
-            </li>
-            <li>
-                <a href="#" class="flex items-center p-1 text-gray-900 dark:text-white hover:bg-[#b9ff66] group">
-                    <svg class="w-5 h-5 ml-3 text-gray-400 group-hover:text-black" aria-hidden="true"
-                        xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 20">
-                        <path
-                            d="M16 14V2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v15a3 3 0 0 0 3 3h12a1 1 0 0 0 0-2h-1v-2a2 2 0 0 0 2-2ZM4 2h2v12H4V2Zm8 16H3a1 1 0 0 1 0-2h9v2Z" />
-                    </svg>
-                    <span class="ms-3 group-hover:text-black group">
-                        <span class="font-bold">Chapter 4.</span>&nbsp;Examples</span>
-                </a>
-            </li>
-        </ul>
-    </div>
-</aside>
+    <aside class="fixed top-20 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0">
+        <div class="h-full py-4 overflow-y-auto bg-[#414141]">
+            <a href="#" class="flex items-center ps-5">
+                <span class="self-center text-xl font-bold whitespace-nowrap dark:text-white">Laravel Chapters</span>
+            </a>
+            <ul class="space-y-2 mt-7">
+                <li>
+                    <a href="#" class="flex items-center pl-7 py-2 text-gray-900 dark:text-white hover:bg-[#b9ff66] group">
+                        <span class="ms-3 group-hover:text-black group">
+                            <span class="font-bold">Chapter 1.</span>&nbsp;Introduction
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="flex items-center pl-7 py-2 text-gray-900 dark:text-white hover:bg-[#b9ff66] group">
+                        <span class="ms-3 group-hover:text-black group">
+                            <span class="font-bold">Chapter 2.</span>&nbsp;MVC</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="flex items-center pl-7 py-2 text-gray-900 dark:text-white hover:bg-[#b9ff66] group">
+                        <span class="ms-3 group-hover:text-black group">
+                            <span class="font-bold">Chapter 3.</span>&nbsp;Instalation</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="flex items-center pl-7 py-2 text-gray-900 dark:text-white hover:bg-[#b9ff66] group">
+                        <span class="ms-3 group-hover:text-black group">
+                            <span class="font-bold">Chapter 4.</span>&nbsp;Examples</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </aside>
 
 <!-- Main -->
 <main class="relative z-20 bg-[#141414] pl-64">
