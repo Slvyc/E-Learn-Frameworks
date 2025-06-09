@@ -9,7 +9,6 @@
             <div class="absolute inset-0 bg-gradient-to-r from-black to-white/20"></div>
         </div>
 
-        <!-- hero teks -->
         <div class="relative z-10 flex flex-col items-start justify-center h-full px-10 text-left">
             <h1 class="text-white text-4xl md:text-5xl font-bold max-w-xl">
                 All Framework
@@ -19,7 +18,7 @@
 
     <!-- Main Container -->
     <main class="relative z-20 bg-[#141414]">
-        <div class="max-w-en-xl px-6 top-0 flex relative gap-8">
+        <div class="max-w-screen-xl px-6 top-0 flex relative gap-8">
 
             <!-- Sidebar -->
             <aside class="w-1/5 relative py-8 px-4 sticky top-[80px] self-start h-[calc(100vh-80px)] mt-10">

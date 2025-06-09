@@ -80,7 +80,7 @@
 
   <!-- how to use 2 -->
   <section id="how-to-use" class="relative z-10 bg-[#141414]/70 py-16 px-6 text-white">
-    <div class="max-w-screen-xl mx-auto gri d grid-cols-1 md:grid-cols-2 gap-10">
+    <div class="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
 
     <!-- kiri -->
     <div class="flex text-center flex-col justify-center h-full">
