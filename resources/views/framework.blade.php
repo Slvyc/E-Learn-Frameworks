@@ -90,7 +90,7 @@
                 <!-- Framework cols 1 -->
                 <div id="frontend" class="grid grid-cols-4 sm:grid-cols-2 md:grid-cols-4 gap-6 mb-10">
                     <!-- Card -->
-                    <div class="relative bg-black rounded-xl overflow-hidden">
+                    <div class="relative bg-black rounded-[30px] overflow-hidden">
                         <div class="relative">
                             <img src="images/bg-tools1.png" class="w-full h-full object-contain">
                             <a href="#" target="_blank"
@@ -101,7 +101,7 @@
                         <div class="flex justify-between items-center px-4 pb-4 pt-4">
                             <h3 class="text-white font-semibold mx-auto">Tailwind CSS</h3>
                             <button class="text-white text-xl"><svg xmlns="http://www.w3.org/2000/svg"
-                                    class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                    class="w-5 h-5 text-[#b9ff66]" fill="none" viewBox="0 0 24 24" stroke="currentColor"
                                     stroke-width="2">
                                     <path stroke-linecap="round" stroke-linejoin="round"
                                         d="M5 5v14l7-7 7 7V5a2 2 0 00-2-2H7a2 2 0 00-2 2z" />
@@ -109,7 +109,7 @@
                             </button>
                         </div>
                     </div>
-                    <div class="relative bg-black rounded-xl overflow-hidden">
+                    <div class="relative bg-black rounded-[30px] overflow-hidden">
                         <div class="relative">
                             <img src="images/bg-tools1.png" class="w-full h-full object-contain">
                             <a href="#" target="_blank"
@@ -120,7 +120,7 @@
                         <div class="flex justify-between items-center px-4 pb-4 pt-4">
                             <h3 class="text-white font-semibold mx-auto">Tailwind CSS</h3>
                             <button class="text-white text-xl"><svg xmlns="http://www.w3.org/2000/svg"
-                                    class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                    class="w-5 h-5 text-[#b9ff66]" fill="none" viewBox="0 0 24 24" stroke="currentColor"
                                     stroke-width="2">
                                     <path stroke-linecap="round" stroke-linejoin="round"
                                         d="M5 5v14l7-7 7 7V5a2 2 0 00-2-2H7a2 2 0 00-2 2z" />
@@ -128,7 +128,7 @@
                             </button>
                         </div>
                     </div>
-                    <div class="relative bg-black rounded-xl overflow-hidden">
+                    <div class="relative bg-black rounded-[30px] overflow-hidden">
                         <div class="relative">
                             <img src="images/bg-tools1.png" class="w-full h-full object-contain">
                             <a href="#" target="_blank"
@@ -139,7 +139,7 @@
                         <div class="flex justify-between items-center px-4 pb-4 pt-4">
                             <h3 class="text-white font-semibold mx-auto">Tailwind CSS</h3>
                             <button class="text-white text-xl"><svg xmlns="http://www.w3.org/2000/svg"
-                                    class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                    class="w-5 h-5 text-[#b9ff66]" fill="none" viewBox="0 0 24 24" stroke="currentColor"
                                     stroke-width="2">
                                     <path stroke-linecap="round" stroke-linejoin="round"
                                         d="M5 5v14l7-7 7 7V5a2 2 0 00-2-2H7a2 2 0 00-2 2z" />
@@ -147,7 +147,7 @@
                             </button>
                         </div>
                     </div>
-                    <div class="relative bg-black rounded-xl overflow-hidden">
+                    <div class="relative bg-black rounded-[30px] overflow-hidden">
                         <div class="relative">
                             <img src="images/bg-tools1.png" class="w-full h-full object-contain">
                             <a href="#" target="_blank"
@@ -158,7 +158,7 @@
                         <div class="flex justify-between items-center px-4 pb-4 pt-4">
                             <h3 class="text-white font-semibold mx-auto">Tailwind CSS</h3>
                             <button class="text-white text-xl"><svg xmlns="http://www.w3.org/2000/svg"
-                                    class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                    class="w-5 h-5 text-[#b9ff66]" fill="none" viewBox="0 0 24 24" stroke="currentColor"
                                     stroke-width="2">
                                     <path stroke-linecap="round" stroke-linejoin="round"
                                         d="M5 5v14l7-7 7 7V5a2 2 0 00-2-2H7a2 2 0 00-2 2z" />
@@ -170,7 +170,7 @@
 
                 <div id="backend" class="grid grid-cols-4 sm:grid-cols-2 md:grid-cols-4 gap-6 mb-10">
                     <!-- Card -->
-                    <div class="relative bg-black rounded-xl overflow-hidden">
+                    <div class="relative bg-black rounded-[30px] overflow-hidden">
                         <div class="relative">
                             <img src="images/bg-tools1.png" class="w-full h-full object-contain">
                             <a href="#" target="_blank"
@@ -181,7 +181,7 @@
                         <div class="flex justify-between items-center px-4 pb-4 pt-4">
                             <h3 class="text-white font-semibold mx-auto">Tailwind CSS</h3>
                             <button class="text-white text-xl"><svg xmlns="http://www.w3.org/2000/svg"
-                                    class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                    class="w-5 h-5 text-[#b9ff66]" fill="none" viewBox="0 0 24 24" stroke="currentColor"
                                     stroke-width="2">
                                     <path stroke-linecap="round" stroke-linejoin="round"
                                         d="M5 5v14l7-7 7 7V5a2 2 0 00-2-2H7a2 2 0 00-2 2z" />
@@ -189,7 +189,7 @@
                             </button>
                         </div>
                     </div>
-                    <div class="relative bg-black rounded-xl overflow-hidden">
+                    <div class="relative bg-black rounded-[30px] overflow-hidden">
                         <div class="relative">
                             <img src="images/bg-tools1.png" class="w-full h-full object-contain">
                             <a href="#" target="_blank"
@@ -200,7 +200,7 @@
                         <div class="flex justify-between items-center px-4 pb-4 pt-4">
                             <h3 class="text-white font-semibold mx-auto">Tailwind CSS</h3>
                             <button class="text-white text-xl"><svg xmlns="http://www.w3.org/2000/svg"
-                                    class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                    class="w-5 h-5 text-[#b9ff66]" fill="none" viewBox="0 0 24 24" stroke="currentColor"
                                     stroke-width="2">
                                     <path stroke-linecap="round" stroke-linejoin="round"
                                         d="M5 5v14l7-7 7 7V5a2 2 0 00-2-2H7a2 2 0 00-2 2z" />
@@ -208,7 +208,7 @@
                             </button>
                         </div>
                     </div>
-                    <div class="relative bg-black rounded-xl overflow-hidden">
+                    <div class="relative bg-black rounded-[30px] overflow-hidden">
                         <div class="relative">
                             <img src="images/bg-tools1.png" class="w-full h-full object-contain">
                             <a href="#" target="_blank"
@@ -219,7 +219,7 @@
                         <div class="flex justify-between items-center px-4 pb-4 pt-4">
                             <h3 class="text-white font-semibold mx-auto">Tailwind CSS</h3>
                             <button class="text-white text-xl"><svg xmlns="http://www.w3.org/2000/svg"
-                                    class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                    class="w-5 h-5 text-[#b9ff66]" fill="none" viewBox="0 0 24 24" stroke="currentColor"
                                     stroke-width="2">
                                     <path stroke-linecap="round" stroke-linejoin="round"
                                         d="M5 5v14l7-7 7 7V5a2 2 0 00-2-2H7a2 2 0 00-2 2z" />
@@ -227,7 +227,7 @@
                             </button>
                         </div>
                     </div>
-                    <div class="relative bg-black rounded-xl overflow-hidden">
+                    <div class="relative bg-black rounded-[30px] overflow-hidden">
                         <div class="relative">
                             <img src="images/bg-tools1.png" class="w-full h-full object-contain">
                             <a href="#" target="_blank"
@@ -238,7 +238,7 @@
                         <div class="flex justify-between items-center px-4 pb-4 pt-4">
                             <h3 class="text-white font-semibold mx-auto">Tailwind CSS</h3>
                             <button class="text-white text-xl"><svg xmlns="http://www.w3.org/2000/svg"
-                                    class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                    class="w-5 h-5 text-[#b9ff66]" fill="none" viewBox="0 0 24 24" stroke="currentColor"
                                     stroke-width="2">
                                     <path stroke-linecap="round" stroke-linejoin="round"
                                         d="M5 5v14l7-7 7 7V5a2 2 0 00-2-2H7a2 2 0 00-2 2z" />

@@ -9,7 +9,7 @@
     @vite('resources/css/app.css')
 </head>
 
-<body class="bg-[#141414]">
+<body class="bg-black">
     {{-- navbar start --}}
     <header class="fixed inset-x-0 top-0 z-50 bg-[#141414]">
         <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
@@ -95,7 +95,7 @@
     {{-- content end --}}
     </div>
     {{-- footer start --}}
-    <footer class="bg-[#141414] text-white py-8 mt-16">
+    <footer class="relative bg-[#141414] text-white z-0 py-8">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <div class="mb-4 md:mb-0">
