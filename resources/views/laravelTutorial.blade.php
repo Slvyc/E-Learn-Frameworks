@@ -22,7 +22,7 @@
             <a href="#" class="flex items-center ps-5">
                 <span class="self-center text-xl font-bold whitespace-nowrap dark:text-white">Laravel Chapters</span>
             </a>
-            <ul class="space-y-2 mt-7">
+            <ul class="text-sm space-y-2 mt-7">
                 <li>
                     <a href="#" class="flex items-center pl-7 py-2 text-gray-900 dark:text-white hover:bg-[#b9ff66] group">
                         <span class="ms-3 group-hover:text-black group">
