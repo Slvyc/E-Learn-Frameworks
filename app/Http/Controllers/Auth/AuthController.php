@@ -42,12 +42,14 @@ class AuthController extends Controller
 
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
-            return redirect()->route('home'); // arahkan ke home
+    
+            // Cek apakah user adalah admin
+            if (Auth::user()->role === 'admin') {
+                return redirect()->intended('/admin'); // ke dashboard Filament
+            }
+    
+            return redirect()->intended('/'); // user biasa
         }
-
-        return back()->withErrors([
-            'email' => 'Email atau password salah.',
-        ]);
     }
 
     public function logout(Request $request)

@@ -42,14 +42,10 @@
             {{-- cek apakah sudah login --}}
             <div class="hidden lg:flex lg:flex-1 lg:justify-end">
                 @auth
-                    <span
-                        class="inline-block bg-gradient-to-r from-[#b9ff66] to-[#98d454] text-black text-sm font-semibold px-3 py-1 rounded-[40px] mr-2">
-                        👋 Hello, {{ Auth::user()->name }}
-                    </span>
-                    {{-- <form method="POST" action="{{ route('logout') }}" class="inline">
-                        @csrf
-                        <button type="submit" class="bg-red-500 text-white px-3 py-1 rounded">Logout</button>
-                    </form> --}}
+                    <button type="submit"
+                        class="bg-[#b9ff66] hover:bg-[#b9ff66]/50 text-black text-sm/6 font-medium px-3 py-1 rounded-[40px] shadow transition duration-300 mr-2">
+                        👋 Hello, {{ Auth::user()->name }}<span aria-hidden="true"></span>
+                    </button>
                     <form method="POST" action="{{ route('logout') }}">
                         @csrf
                         <button type="submit"
