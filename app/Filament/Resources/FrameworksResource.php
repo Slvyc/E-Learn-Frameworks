@@ -24,6 +24,15 @@ class FrameworksResource extends Resource
     {
         return $form
             ->schema([
+                 Forms\Components\FileUpload::make('logo')
+                    ->label('Logo')
+                    ->required()
+                    ->directory('frameworks/logos')
+                    ->columnSpan('full')
+                    ->imagePreviewHeight('150')
+                    ->preserveFilenames()
+                    ->imageEditor(),
+
                 Forms\Components\TextInput::make('name')
                     ->required()
                     ->maxLength(255)
@@ -59,6 +68,12 @@ class FrameworksResource extends Resource
     {
         return $table
             ->columns([
+                Tables\Columns\ImageColumn::make('logo')
+                    ->label('Logo')
+                    ->square()
+                    ->width(50)
+                    ->height(50),
+
                 Tables\Columns\TextColumn::make('name')
                     ->label('Nama Framework')
                     ->searchable()

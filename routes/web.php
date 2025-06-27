@@ -7,8 +7,13 @@ Route::get('/', function () {
     return view('home');
 })->name('home');
 
+// Route::get('/framework', function () {
+//     return view('framework');
+// })->name('framework');
+
 Route::get('/framework', function () {
-    return view('framework');
+    $frameworks = App\Models\Frameworks::all();
+    return view('framework', compact('frameworks'));
 })->name('framework');
 
 

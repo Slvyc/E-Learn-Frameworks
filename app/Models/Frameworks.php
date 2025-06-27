@@ -15,6 +15,7 @@ class Frameworks extends Model
         'tech_stack',
         'slug',
         'description',
+        'logo',
     ];
 
     public function getRouteKeyName()

@@ -115,7 +115,7 @@
     {{-- content end --}}
     </div>
     {{-- footer start --}}
-    <footer class="relative bg-[#141414] text-white z-0 py-8">
+    <footer class="relative bg-[#141414] text-white z-40 py-8">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <div class="mb-4 md:mb-0">
