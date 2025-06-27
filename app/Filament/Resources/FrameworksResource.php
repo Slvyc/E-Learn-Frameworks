@@ -40,7 +40,7 @@ class FrameworksResource extends Resource
                         'frontend' => 'Frontend',
                         'mobiledev' => 'Mobile Development',
                     ])
-                    ->label('Tumpukan Teknologi')
+                    ->label('Tech Stack')
                     ->required(),
 
                 Forms\Components\TextInput::make('slug')

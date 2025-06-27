@@ -31,7 +31,7 @@ class SectionsResource extends Resource
                     ->preload(),
 
                 Forms\Components\Select::make('chapter_id')
-                    ->relationship('chapters', 'title')
+                    ->relationship('chapter', 'title')
                     ->required()
                     ->label('Chapter')
                     ->searchable()
