@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\AuthController;
+use App\Http\Controllers\Framework;
+
 
 Route::get('/', function () {
     return view('home');
@@ -11,11 +13,12 @@ Route::get('/', function () {
 //     return view('framework');
 // })->name('framework');
 
-Route::get('/framework', function () {
-    $frameworks = App\Models\Frameworks::all();
-    return view('framework', compact('frameworks'));
-})->name('framework');
+// Route::get('/framework', function () {
+//     $frameworks = App\Models\Frameworks::all();
+//     return view('framework', compact('frameworks'));
+// })->name('framework');
 
+Route::get('/framework', [Framework::class, 'index'])->name('framework');
 
 Route::get('/about', function () {
     return view('about');
