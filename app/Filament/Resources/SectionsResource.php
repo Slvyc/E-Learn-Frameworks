@@ -5,6 +5,8 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\SectionsResource\Pages;
 use App\Filament\Resources\SectionsResource\RelationManagers;
 use App\Models\Sections;
+use App\Models\Frameworks;
+use App\Models\Chapters;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -27,6 +29,9 @@ class SectionsResource extends Resource
                     ->relationship('framework', 'name')
                     ->required()
                     ->label('Framework')
+                    ->options(Frameworks::all()->pluck('name', 'id'))
+                    ->reactive()
+                    ->afterStateUpdated(fn (callable $set) => $set('chapter_id', null))
                     ->searchable()
                     ->preload(),
 
@@ -34,6 +39,11 @@ class SectionsResource extends Resource
                     ->relationship('chapter', 'title')
                     ->required()
                     ->label('Chapter')
+                    ->options(function (callable $get) {
+                        $frameworkId = $get('framework_id');
+                        if (!$frameworkId) return Chapters::pluck('title', 'id');
+                        return Chapters::where('framework_id', $frameworkId)->pluck('title', 'id');
+                    })
                     ->searchable()
                     ->preload(),
 

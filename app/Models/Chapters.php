@@ -25,10 +25,11 @@ class Chapters extends Model
     {
         return $this->belongsTo(Frameworks::class);
     }
+    
 
     public function sections(): HasMany
     {
-        return $this->hasMany(Sections::class);
+        return $this->hasMany(Sections::class, 'chapter_id');
     }
 
     public function progress(): HasMany
