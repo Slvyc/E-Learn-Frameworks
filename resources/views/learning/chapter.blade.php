@@ -23,7 +23,8 @@
     <aside class="fixed top-20 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0">
         <div class="h-full py-4 overflow-y-auto bg-[#414141]">
             <a href="#" class="flex items-center ps-5">
-                <span class="self-center text-xl font-bold whitespace-nowrap dark:text-white mt-7">{{ $framework->name . " Chapters" }}</span>
+                <span
+                    class="self-center text-xl font-bold whitespace-nowrap dark:text-white mt-7">{{ $framework->name . " Chapters" }}</span>
             </a>
             <ul class="text-sm space-y-2 mt-7">
                 @foreach($allChapters as $chap)
@@ -65,7 +66,8 @@
                                             <div class="w-2 h-2 rounded-full bg-yellow-500"></div>
                                             <div class="w-2 h-2 rounded-full bg-[#077019]"></div>
                                         </span>
-                                        <button data-clipboard-target="{{ $section->code_sample }}">
+                                        <!-- Gunakan id unik untuk setiap code -->
+                                        <button class="copy-btn" data-clipboard-target="#code-{{ $section->id }}">
                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="#414141" class="size-6">
                                                 <path
                                                     d="M7 3.5A1.5 1.5 0 0 1 8.5 2h3.879a1.5 1.5 0 0 1 1.06.44l3.122 3.12A1.5 1.5 0 0 1 17 6.622V12.5a1.5 1.5 0 0 1-1.5 1.5h-1v-3.379a3 3 0 0 0-.879-2.121L10.5 5.379A3 3 0 0 0 8.379 4.5H7v-1Z" />
@@ -75,9 +77,8 @@
                                         </button>
                                     </div>
                                     <div class="overflow-x-auto">
-                                        <pre id="code"
-                                            class="text-gray-300 bg-[#1f1f1f] code p-4 rounded-md whitespace-pre overflow-x-auto {{ strtolower($framework->language) }}"><code>{{ $section->code_sample }}</code>
-                                        </pre>
+                                        <pre id="code-{{ $section->id }}"
+                                            class="text-gray-300 bg-[#1f1f1f] code p-4 rounded-md whitespace-pre overflow-x-auto {{ strtolower($framework->language) }}"><code>{{ $section->code_sample }}</code></pre>
                                     </div>
                                 </div>
                             @endif
@@ -92,7 +93,7 @@
 
             <div class="flex justify-between items-center -mt-2">
                 @php
-                    $currentIndex = $allChapters->search(function($chap) use ($chapter) {
+                    $currentIndex = $allChapters->search(function ($chap) use ($chapter) {
                         return $chap->id == $chapter->id;
                     });
                     $prevChapter = $currentIndex > 0 ? $allChapters[$currentIndex - 1] : null;
@@ -117,4 +118,23 @@
             </div>
         </div>
     </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
+    <script>
+        // Inisialisasi ClipboardJS pada tombol dengan class .copy-btn
+        new ClipboardJS('.copy-btn');
+
+        // Optional: Feedback saat berhasil copy
+        document.querySelectorAll('.copy-btn').forEach(btn => {
+            btn.addEventListener('click', function () {
+                const original = btn.innerHTML;
+                btn.innerHTML = '<span style="font-size: 12px;">Copied</span>';
+                setTimeout(() => {
+                    btn.innerHTML = original;
+                }, 1000);
+            });
+        });
+    </script>
 @endsection
+
+@push('scripts')
+@endpush
