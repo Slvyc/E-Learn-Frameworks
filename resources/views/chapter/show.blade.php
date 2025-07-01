@@ -52,10 +52,10 @@
                     <section id="laravel" class="space-y-6 text-gray-300 leading-relaxed mb-15">
                         <h2 class="text-2xl text-white font-semibold"><span
                                 class="text-[#b9ff66]">#</span>&nbsp;{{ $section->title }}
-                            <p>
-                                {!! nl2br(e($section->content)) !!}
-                            </p>
                         </h2>
+                        <p>
+                            {!! nl2br(e($section->content)) !!}
+                        </p>
                         <div class="relative ml-0 mt-7">
                             @if($section->code_sample)
                                 <div class="bg-black/20 p-3 text-white rounded-md">
