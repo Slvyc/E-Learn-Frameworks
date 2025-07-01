@@ -23,7 +23,7 @@
     <aside class="fixed top-20 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0">
         <div class="h-full py-4 overflow-y-auto bg-[#414141]">
             <a href="#" class="flex items-center ps-5">
-                <span class="self-center text-xl font-bold whitespace-nowrap dark:text-white">{{ $framework->name . " Chapters" }}</span>
+                <span class="self-center text-xl font-bold whitespace-nowrap dark:text-white mt-7">{{ $framework->name . " Chapters" }}</span>
             </a>
             <ul class="text-sm space-y-2 mt-7">
                 @foreach($allChapters as $chap)
@@ -103,7 +103,7 @@
                     <a href="{{ route('chapter.show', [$framework->slug, $prevChapter->slug]) }}"
                         class="text-sm px-4 py-1.5 bg-[#b9ff66] hover:bg-[#b9ff66]/50 text-black rounded-full font-semibold flex items-center gap-1">
                         ← Previous
-                        <small class="ml-2 text-xs font-normal">{{ $prevChapter->title }}</small>
+                        <small class="ml-2 text-xs font-semibold">{{ $prevChapter->title }}</small>
                     </a>
                 @endif
 
@@ -111,7 +111,7 @@
                     <a href="{{ route('chapter.show', [$framework->slug, $nextChapter->slug]) }}"
                         class="text-sm px-4 py-1.5 bg-[#b9ff66] hover:bg-[#b9ff66]/50 text-black rounded-full font-semibold flex items-center gap-1">
                         Next →
-                        <small class="mr-2 text-xs font-normal">{{ $nextChapter->title }}</small>
+                        <small class="mr-2 text-xs font-semi bold">{{ $nextChapter->title }}</small>
                     </a>
                 @endif
             </div>

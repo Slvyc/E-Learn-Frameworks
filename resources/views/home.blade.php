@@ -41,9 +41,9 @@
       <h2 class="text-3xl font-bold mb-15">Popular Framework</h2>
       <div class="grid grid-cols-3 md:grid-cols-3 items-center">
       <!-- Card 1 -->
-      <a href="#" class="flex flex-col items-center text-center">
+      <a href="{{ route('framework') }}" class="flex flex-col items-center text-center">
         <div class="bg-white rounded-xl w-70 h-70 flex items-center justify-center">
-        <img src="{{ asset('images/bg-tools1.png') }}" alt="Laravel" class="h-60 rounded-full">
+        <img src="{{ asset('images/Laravel.svg.png') }}" alt="Laravel" class="h-60 ">
         </div>
         <h3 class="text-lg font-semibold mt-4">Laravel</h3>
         <p class="text-sm text-gray-400 max-w-xs mt-2">
@@ -52,9 +52,9 @@
       </a>
 
       <!-- Card 2 -->
-      <a href="#" class="flex flex-col items-center text-center">
+      <a href="{{ route('framework') }}" class="flex flex-col items-center text-center">
         <div class="bg-white rounded-xl w-70 h-70 flex items-center justify-center">
-        <img src="{{ asset('images/bg-tools1.png') }}" alt="Node.js" class="h-60 rounded-full">
+        <img src="{{ asset('images/bg-tools1.png') }}" alt="Node.js" class="h-60 ">
         </div>
         <h3 class="text-lg font-semibold mt-4">Node.js</h3>
         <p class="text-sm text-gray-400 max-w-xs mt-2">
@@ -63,9 +63,9 @@
       </a>
 
       <!-- Card 3 -->
-      <a href="#" class="flex flex-col items-center text-center">
+      <a href="{{ route('framework') }}" class="flex flex-col items-center text-center">
         <div class="bg-white rounded-xl w-70 h-70 flex items-center justify-center">
-        <img src="{{ asset('images/bg-tools1.png') }}" alt="Tailwind CSS" class="h-60 rounded-full">
+        <img src="{{ asset('images/tailwind logo.png') }}" alt="Tailwind CSS" class="h-60 ">
         </div>
         <h3 class="text-lg font-semibold mt-4">Tailwind css</h3>
         <p class="text-sm text-gray-400 max-w-xs mt-2">
@@ -137,7 +137,7 @@
 
       <!-- button get Started -->
       <div class="text-center mt-4">
-      <a href="#get-started"
+      <a href="{{ route('framework') }}"
         class="bg-[#b9ff66] hover:bg-[#b9ff66]/20 text-black text-sm/6 font-semibold px-5 py-2 rounded-[10px] shadow transition duration-300">
         Get Started
       </a>

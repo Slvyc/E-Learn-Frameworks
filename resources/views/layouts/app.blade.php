@@ -17,7 +17,7 @@
                 <a href="#" class="-m-1.5 p-1.5">
                     <span class="sr-only">E-Learn</span>
                     <img class="h-12 w-auto"
-                        src="images/Logo E- Learn.png" alt="">
+                        src="images/Logo E-Learn.png" alt="">
                 </a>
             </div>
             <div class="flex lg:hidden">
