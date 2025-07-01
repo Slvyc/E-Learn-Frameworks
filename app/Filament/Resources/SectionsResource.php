@@ -55,11 +55,11 @@ class SectionsResource extends Resource
 
                 Forms\Components\Textarea::make('content')
                     ->required()
-                    ->maxLength(255)
-                    ->label('Isi Konten'),
+                    ->label('Isi Konten')
+                    ->rows(10)
+                    ->columnSpanFull(),
 
                 Forms\Components\Textarea::make('code_sample')
-                    ->required()
                     ->maxLength(255)
                     ->label('Contoh Kode'),
 
@@ -92,7 +92,12 @@ class SectionsResource extends Resource
                 Tables\Columns\TextColumn::make('content')
                     ->label('Isi Konten')
                     ->searchable()
-                    ->sortable(),
+                    ->sortable()
+                    ->wrap()
+                    ->limit(100)
+                    ->tooltip(function (Tables\Columns\TextColumn $column): ?string {
+                        return $column->getState();
+                    }),
                 
                 Tables\Columns\TextColumn::make('code_sample')
                     ->label('Contoh Kode')

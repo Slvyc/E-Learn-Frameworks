@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\Framework;
 use App\Http\Controllers\FrameworkController;
-
+use Doctrine\DBAL\Driver\Middleware;  
 
 Route::get('/', function () {
     return view('home');
@@ -48,7 +48,7 @@ Route::post('/register', [AuthController::class, 'register']);
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
 // Routes untuk learning functionality
-Route::group(['prefix' => 'learn'], function () {
+Route::group(['prefix' => 'learn', 'middleware' => 'auth'], function () {
     
     // Route untuk tombol "Learn more" - langsung ke chapter 1
     Route::get('/{framework}/start', [FrameworkController::class, 'startLearning'])

@@ -33,7 +33,7 @@
                         <a href="{{ route('chapter.show', [$framework->slug, $chap->slug]) }}"
                             class="flex items-center pl-7 py-2 text-gray-900 dark:text-white hover:bg-[#b9ff66] group">
                             <span class="ms-3 group-hover:text-black group">
-                                <span class="font-bold">{{ $chap->order . '.' }}</span>&nbsp;{{ $chap->title }}
+                                <span class="font-bold">{{ "Chapter " . $chap->order . '.' }}</span>&nbsp;{{ $chap->title }}
                             </span>
                         </a>
                     </li>

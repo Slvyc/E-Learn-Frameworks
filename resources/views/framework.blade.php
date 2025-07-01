@@ -78,16 +78,6 @@
                             class="w-full px-4 py-1 rounded-full bg-white text-black border-3 border-[#b9ff66] placeholder-[#000000]/50 focus:outline-none focus:ring-2 focus:ring-[#b9ff66]"
                             id="frameworkSearchInput" placeholder="Cari" />
                     </form>
-
-                    <button
-                        class="flex items-center gap-2 bg-[#414141] hover:bg-[#414141]/80 text-white px-5 py-2 rounded-full text-sm font-semibold">
-                        Most Bookmarked
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="white" viewBox="0 0 24 24"
-                            stroke="white">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M5 5v14l7-7 7 7V5a2 2 0 00-2-2H7a2 2 0 00-2 2z" />
-                        </svg>
-                    </button>
                 </div>
 
                 <!-- Framework cols 1 -->
@@ -96,85 +86,6 @@
                     @include('partials.frameworkPart')
                 </div>
 
-                {{-- <div id="backend" class="grid grid-cols-4 sm:grid-cols-2 md:grid-cols-4 gap-6 mb-10">
-                    <!-- Card -->
-                    <div class="relative bg-black rounded-[30px] overflow-hidden">
-                        <div class="relative">
-                            <img src="images/bg-tools1.png" class="w-full h-full object-contain">
-                            <a href="#" target="_blank"
-                                class="absolute bottom-2 right-2 text-xs text-white bg-[#FF9010] px-2 py-1 rounded-xl">
-                                Learn more
-                            </a>
-                        </div>
-                        <div class="flex justify-between items-center px-4 pb-4 pt-4">
-                            <h3 class="text-white font-semibold mx-auto">Tailwind CSS</h3>
-                            <button class="text-white text-xl"><svg xmlns="http://www.w3.org/2000/svg"
-                                    class="w-5 h-5 text-[#b9ff66]" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                                    stroke-width="2">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="M5 5v14l7-7 7 7V5a2 2 0 00-2-2H7a2 2 0 00-2 2z" />
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="relative bg-black rounded-[30px] overflow-hidden">
-                        <div class="relative">
-                            <img src="images/bg-tools1.png" class="w-full h-full object-contain">
-                            <a href="#" target="_blank"
-                                class="absolute bottom-2 right-2 text-xs text-white bg-[#FF9010] px-2 py-1 rounded-xl">
-                                Learn more
-                            </a>
-                        </div>
-                        <div class="flex justify-between items-center px-4 pb-4 pt-4">
-                            <h3 class="text-white font-semibold mx-auto">Tailwind CSS</h3>
-                            <button class="text-white text-xl"><svg xmlns="http://www.w3.org/2000/svg"
-                                    class="w-5 h-5 text-[#b9ff66]" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                                    stroke-width="2">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="M5 5v14l7-7 7 7V5a2 2 0 00-2-2H7a2 2 0 00-2 2z" />
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="relative bg-black rounded-[30px] overflow-hidden">
-                        <div class="relative">
-                            <img src="images/bg-tools1.png" class="w-full h-full object-contain">
-                            <a href="#" target="_blank"
-                                class="absolute bottom-2 right-2 text-xs text-white bg-[#FF9010] px-2 py-1 rounded-xl">
-                                Learn more
-                            </a>
-                        </div>
-                        <div class="flex justify-between items-center px-4 pb-4 pt-4">
-                            <h3 class="text-white font-semibold mx-auto">Tailwind CSS</h3>
-                            <button class="text-white text-xl"><svg xmlns="http://www.w3.org/2000/svg"
-                                    class="w-5 h-5 text-[#b9ff66]" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                                    stroke-width="2">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="M5 5v14l7-7 7 7V5a2 2 0 00-2-2H7a2 2 0 00-2 2z" />
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="relative bg-black rounded-[30px] overflow-hidden">
-                        <div class="relative">
-                            <img src="images/bg-tools1.png" class="w-full h-full object-contain">
-                            <a href="#" target="_blank"
-                                class="absolute bottom-2 right-2 text-xs text-white bg-[#FF9010] px-2 py-1 rounded-xl">
-                                Learn more
-                            </a>
-                        </div>
-                        <div class="flex justify-between items-center px-4 pb-4 pt-4">
-                            <h3 class="text-white font-semibold mx-auto">Tailwind CSS</h3>
-                            <button class="text-white text-xl"><svg xmlns="http://www.w3.org/2000/svg"
-                                    class="w-5 h-5 text-[#b9ff66]" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                                    stroke-width="2">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="M5 5v14l7-7 7 7V5a2 2 0 00-2-2H7a2 2 0 00-2 2z" />
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-                </div> --}}
             </section>
         </div>
     </main>

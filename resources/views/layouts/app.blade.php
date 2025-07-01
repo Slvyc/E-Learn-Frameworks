@@ -16,8 +16,8 @@
             <div class="flex lg:flex-1">
                 <a href="#" class="-m-1.5 p-1.5">
                     <span class="sr-only">E-Learn</span>
-                    <img class="h-8 w-auto"
-                        src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600" alt="">
+                    <img class="h-12 w-auto"
+                        src="images/Logo E- Learn.png" alt="">
                 </a>
             </div>
             <div class="flex lg:hidden">
@@ -36,8 +36,8 @@
                 <a href="{{ route('framework') }}" class="text-sm/6 font-semibold text-white">Frameworks</a>
                 <a href="{{ route('about') }}" class="text-sm/6 font-semibold text-white">About</a>
                 <a href="{{ route("contact")}}" class="text-sm/6 font-semibold text-white">Contact</a>
-                <a href="{{ route("laravelTutorial")}}" class="text-sm/6 font-semibold text-white">Laravel</a>
-                <a href="{{ route("instalationLaravel")}}" class="text-sm/6 font-semibold text-white">Laravel</a>
+                {{-- <a href="{{ route("laravelTutorial")}}" class="text-sm/6 font-semibold text-white">Laravel</a>
+                <a href="{{ route("instalationLaravel")}}" class="text-sm/6 font-semibold text-white">Laravel</a> --}}
             </div>
             {{-- cek apakah sudah login --}}
             <div class="hidden lg:flex lg:flex-1 lg:justify-end">
