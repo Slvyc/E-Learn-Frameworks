@@ -43,116 +43,107 @@
             {{-- cek apakah sudah login --}}
             <div class="hidden lg:flex lg:flex-1 lg:justify-end">
                 @auth
-                <!-- INI USER PROFILE YANG KUTAMBAHIN YA DAP -->
-                <div class="relative flex items-center">
-                    <div class="flex items-center ms-3">
-                        <!-- Tombol Usernya -->
-                        <div class="relative">
-                            <button type="button"
-                                class="flex items-center justify-center w-10 h-10 rounded-full ring-1 ring-gray-500/90 hover:ring-[#b9ff66] transition duration-200 bg-[#1e1e1e]"
-                                aria-expanded="false" data-dropdown-toggle="dropdown-user">
-                                <span class="sr-only">Open user menu</span>
-                                <img class="w-8 h-8 rounded-full object-cover"
-                                    src="https://flowbite.com/docs/images/people/profile-picture-5.jpg"
-                                    alt="User photo" />
-                            </button>
-                        </div>
-
-                        <!-- Dropdownnya -->
-                        <div id="dropdown-user"
-                            class="hidden absolute right-0 top-full mt-4 z-50 w-80 bg-[#141414] text-white rounded-2xl shadow-xl ring-1 ring-white/5 backdrop-blur-lg border border-white/10 animate-fade-in"
-                            role="menu" aria-orientation="vertical">
-
-                            <!-- User Profilenya-->
-                            <div class="px-6 py-4 border-b border-white/10">
-                                <p class="text-base font-semibold">{{ Auth::user()->name }}</p>
-                                <p class="text-sm text-gray-400 truncate">{{ Auth::user()->email }}</p>
+                    <!-- INI USER PROFILE YANG KUTAMBAHIN YA DAP -->
+                    <div class="relative flex items-center">
+                        <div class="flex items-center ms-3">
+                            <!-- Tombol Usernya -->
+                            <div class="relative">
+                                <button type="button"
+                                    class="flex items-center justify-center w-10 h-10 rounded-full ring-1 ring-gray-500/90 hover:ring-[#b9ff66] transition duration-200 bg-[#1e1e1e]"
+                                    aria-expanded="false" data-dropdown-toggle="dropdown-user">
+                                    <span class="sr-only">Open user menu</span>
+                                    <img class="w-8 h-8 rounded-full object-cover"
+                                        src="https://ui-avatars.com/api/?name={{ urlencode(Auth::user()->name) }}&background=1e1e1e&color=b9ff66"
+                                        alt="User photo" />
+                                </button>
                             </div>
 
-                            <!-- Progress -->
-                            <div class="px-6 py-4 border-b border-white/10 space-y-2">
-                                <p class="text-sm font-medium text-gray-300">Laravel • Tutorial</p>
-                                <div class="w-full bg-white rounded-full h-2.5 overflow-hidden">
-                                    <div class="bg-[#b9ff66] h-full text-[10px] text-black text-center leading-none rounded-full"
-                                        style="width: 45%">45%</div>
+                            <!-- Dropdownnya -->
+                            <div id="dropdown-user"
+                                class="hidden absolute right-0 top-full mt-4 z-50 w-80 bg-[#141414] text-white rounded-2xl shadow-xl ring-1 ring-white/5 backdrop-blur-lg border border-white/10 animate-fade-in"
+                                role="menu" aria-orientation="vertical">
+
+                                <!-- User Profilenya-->
+                                <div class="px-6 py-4 border-b border-white/10">
+                                    <p class="text-base font-semibold">{{ Auth::user()->name }}</p>
+                                    <p class="text-sm text-gray-400 truncate">{{ Auth::user()->email }}</p>
                                 </div>
-                            </div>
 
-                            <!-- Menu Section -->
-                            <ul class="font-sm space-y-1">
-                                <li><a href="#"
-                                        class="flex items-center gap-3 px-6 py-2 rounded-lg hover:bg-white/5 transition duration-150 text-gray-300 hover:text-white">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                            class="w-5 h-5 flex-shrink-0">
-                                            <path
-                                                d="M11.47 3.841a.75.75 0 0 1 1.06 0l8.69 8.69a.75.75 0 1 0 1.06-1.061l-8.689-8.69a2.25 2.25 0 0 0-3.182 0l-8.69 8.69a.75.75 0 1 0 1.061 1.06l8.69-8.689Z" />
-                                            <path
-                                                d="m12 5.432 8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 0 1-.75-.75v-4.5a.75.75 0 0 0-.75-.75h-3a.75.75 0 0 0-.75.75V21a.75.75 0 0 1-.75.75H5.625a1.875 1.875 0 0 1-1.875-1.875v-6.198a2.29 2.29 0 0 0 .091-.086L12 5.432Z" />
-                                        </svg>
-                                        <span class="flex-1 whitespace-nowrap">Dashboard</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#"
-                                        class="flex items-center gap-3 px-6 py-2 rounded-lg hover:bg-white/5 transition duration-150 text-gray-300 hover:text-white">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                            class="size-6">
-                                            <path fill-rule="evenodd"
-                                                d="M2.25 13.5a8.25 8.25 0 0 1 8.25-8.25.75.75 0 0 1 .75.75v6.75H18a.75.75 0 0 1 .75.75 8.25 8.25 0 0 1-16.5 0Z"
-                                                clip-rule="evenodd" />
-                                            <path fill-rule="evenodd"
-                                                d="M12.75 3a.75.75 0 0 1 .75-.75 8.25 8.25 0 0 1 8.25 8.25.75.75 0 0 1-.75.75h-7.5a.75.75 0 0 1-.75-.75V3Z"
-                                                clip-rule="evenodd" />
-                                        </svg>
+                                <!-- Progress -->
+                                <div class="px-6 py-4 border-b border-white/10 space-y-2">
+                                    <p class="text-sm font-medium text-gray-300">Laravel • Tutorial</p>
+                                    <div class="w-full bg-white rounded-full h-2.5 overflow-hidden">
+                                        <div class="bg-[#b9ff66] h-full text-[10px] text-black text-center leading-none rounded-full"
+                                            style="width: 45%">45%</div>
+                                    </div>
+                                </div>
 
-                                        <span class="flex-1 whitespace-nowrap">Tutorial</span>
-                                    </a>
-                                    <a href="#"
-                                        class="flex items-center gap-3 px-6 py-2 rounded-lg hover:bg-white/5 transition duration-150 text-gray-300 hover:text-white">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                            class="size-6">
-                                            <path fill-rule="evenodd"
-                                                d="M11.828 2.25c-.916 0-1.699.663-1.85 1.567l-.091.549a.798.798 0 0 1-.517.608 7.45 7.45 0 0 0-.478.198.798.798 0 0 1-.796-.064l-.453-.324a1.875 1.875 0 0 0-2.416.2l-.243.243a1.875 1.875 0 0 0-.2 2.416l.324.453a.798.798 0 0 1 .064.796 7.448 7.448 0 0 0-.198.478.798.798 0 0 1-.608.517l-.55.092a1.875 1.875 0 0 0-1.566 1.849v.344c0 .916.663 1.699 1.567 1.85l.549.091c.281.047.508.25.608.517.06.162.127.321.198.478a.798.798 0 0 1-.064.796l-.324.453a1.875 1.875 0 0 0 .2 2.416l.243.243c.648.648 1.67.733 2.416.2l.453-.324a.798.798 0 0 1 .796-.064c.157.071.316.137.478.198.267.1.47.327.517.608l.092.55c.15.903.932 1.566 1.849 1.566h.344c.916 0 1.699-.663 1.85-1.567l.091-.549a.798.798 0 0 1 .517-.608 7.52 7.52 0 0 0 .478-.198.798.798 0 0 1 .796.064l.453.324a1.875 1.875 0 0 0 2.416-.2l.243-.243c.648-.648.733-1.67.2-2.416l-.324-.453a.798.798 0 0 1-.064-.796c.071-.157.137-.316.198-.478.1-.267.327-.47.608-.517l.55-.091a1.875 1.875 0 0 0 1.566-1.85v-.344c0-.916-.663-1.699-1.567-1.85l-.549-.091a.798.798 0 0 1-.608-.517 7.507 7.507 0 0 0-.198-.478.798.798 0 0 1 .064-.796l.324-.453a1.875 1.875 0 0 0-.2-2.416l-.243-.243a1.875 1.875 0 0 0-2.416-.2l-.453.324a.798.798 0 0 1-.796.064 7.462 7.462 0 0 0-.478-.198.798.798 0 0 1-.517-.608l-.091-.55a1.875 1.875 0 0 0-1.85-1.566h-.344ZM12 15.75a3.75 3.75 0 1 0 0-7.5 3.75 3.75 0 0 0 0 7.5Z"
-                                                clip-rule="evenodd" />
-                                        </svg>
-                                        <span class="flex-1 whitespace-nowrap">Setting</span>
-                                    </a>
-                                </li>
-                                <li><a href="#"
-                                        class="flex items-center gap-3 px-6 py-2 rounded-lg hover:bg-white/5 transition duration-150 text-red-600">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                            class="size-6">
-                                            <path fill-rule="evenodd"
-                                                d="M7.5 3.75A1.5 1.5 0 0 0 6 5.25v13.5a1.5 1.5 0 0 0 1.5 1.5h6a1.5 1.5 0 0 0 1.5-1.5V15a.75.75 0 0 1 1.5 0v3.75a3 3 0 0 1-3 3h-6a3 3 0 0 1-3-3V5.25a3 3 0 0 1 3-3h6a3 3 0 0 1 3 3V9A.75.75 0 0 1 15 9V5.25a1.5 1.5 0 0 0-1.5-1.5h-6Zm5.03 4.72a.75.75 0 0 1 0 1.06l-1.72 1.72h10.94a.75.75 0 0 1 0 1.5H10.81l1.72 1.72a.75.75 0 1 1-1.06 1.06l-3-3a.75.75 0 0 1 0-1.06l3-3a.75.75 0 0 1 1.06 0Z"
-                                                clip-rule="evenodd" />
-                                        </svg>
-                                        <span class="flex-1 whitespace-nowrap">Log Out</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+                                <!-- Menu Section -->
+                                <ul class="font-sm space-y-1">
+                                    <li><a href="#"
+                                            class="flex items-center gap-3 px-6 py-2 rounded-lg hover:bg-white/5 transition duration-150 text-gray-300 hover:text-white">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                                class="w-5 h-5 flex-shrink-0">
+                                                <path
+                                                    d="M11.47 3.841a.75.75 0 0 1 1.06 0l8.69 8.69a.75.75 0 1 0 1.06-1.061l-8.689-8.69a2.25 2.25 0 0 0-3.182 0l-8.69 8.69a.75.75 0 1 0 1.061 1.06l8.69-8.689Z" />
+                                                <path
+                                                    d="m12 5.432 8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 0 1-.75-.75v-4.5a.75.75 0 0 0-.75-.75h-3a.75.75 0 0 0-.75.75V21a.75.75 0 0 1-.75.75H5.625a1.875 1.875 0 0 1-1.875-1.875v-6.198a2.29 2.29 0 0 0 .091-.086L12 5.432Z" />
+                                            </svg>
+                                            <span class="flex-1 whitespace-nowrap">Dashboard</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"
+                                            class="flex items-center gap-3 px-6 py-2 rounded-lg hover:bg-white/5 transition duration-150 text-gray-300 hover:text-white">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                                class="size-6">
+                                                <path fill-rule="evenodd"
+                                                    d="M2.25 13.5a8.25 8.25 0 0 1 8.25-8.25.75.75 0 0 1 .75.75v6.75H18a.75.75 0 0 1 .75.75 8.25 8.25 0 0 1-16.5 0Z"
+                                                    clip-rule="evenodd" />
+                                                <path fill-rule="evenodd"
+                                                    d="M12.75 3a.75.75 0 0 1 .75-.75 8.25 8.25 0 0 1 8.25 8.25.75.75 0 0 1-.75.75h-7.5a.75.75 0 0 1-.75-.75V3Z"
+                                                    clip-rule="evenodd" />
+                                            </svg>
 
-                <!-- DAP INI KU SLICE DULU YA YANG NAVBAR AFTER AUTH -->
-                <!-- <button type="submit"
-                                         class="bg-[#b9ff66] hover:bg-[#b9ff66]/50 text-black text-sm/6 font-medium px-3 py-1 rounded-[40px] shadow transition duration-300 mr-2">
-                                         👋 Hello, {{ Auth::user()->name }}<span aria-hidden="true"></span>
-                                        </button> -->
-                <!-- <form method="POST" action="{{ route('logout') }}">
+                                            <span class="flex-1 whitespace-nowrap">Tutorial</span>
+                                        </a>
+                                        <a href="#"
+                                            class="flex items-center gap-3 px-6 py-2 rounded-lg hover:bg-white/5 transition duration-150 text-gray-300 hover:text-white">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                                class="size-6">
+                                                <path fill-rule="evenodd"
+                                                    d="M11.828 2.25c-.916 0-1.699.663-1.85 1.567l-.091.549a.798.798 0 0 1-.517.608 7.45 7.45 0 0 0-.478.198.798.798 0 0 1-.796-.064l-.453-.324a1.875 1.875 0 0 0-2.416.2l-.243.243a1.875 1.875 0 0 0-.2 2.416l.324.453a.798.798 0 0 1 .064.796 7.448 7.448 0 0 0-.198.478.798.798 0 0 1-.608.517l-.55.092a1.875 1.875 0 0 0-1.566 1.849v.344c0 .916.663 1.699 1.567 1.85l.549.091c.281.047.508.25.608.517.06.162.127.321.198.478a.798.798 0 0 1-.064.796l-.324.453a1.875 1.875 0 0 0 .2 2.416l.243.243c.648.648 1.67.733 2.416.2l.453-.324a.798.798 0 0 1 .796-.064c.157.071.316.137.478.198.267.1.47.327.517.608l.092.55c.15.903.932 1.566 1.849 1.566h.344c.916 0 1.699-.663 1.85-1.567l.091-.549a.798.798 0 0 1 .517-.608 7.52 7.52 0 0 0 .478-.198.798.798 0 0 1 .796.064l.453.324a1.875 1.875 0 0 0 2.416-.2l.243-.243c.648-.648.733-1.67.2-2.416l-.324-.453a.798.798 0 0 1-.064-.796c.071-.157.137-.316.198-.478.1-.267.327-.47.608-.517l.55-.091a1.875 1.875 0 0 0 1.566-1.85v-.344c0-.916-.663-1.699-1.567-1.85l-.549-.091a.798.798 0 0 1-.608-.517 7.507 7.507 0 0 0-.198-.478.798.798 0 0 1 .064-.796l.324-.453a1.875 1.875 0 0 0-.2-2.416l-.243-.243a1.875 1.875 0 0 0-2.416-.2l-.453.324a.798.798 0 0 1-.796.064 7.462 7.462 0 0 0-.478-.198.798.798 0 0 1-.517-.608l-.091-.55a1.875 1.875 0 0 0-1.85-1.566h-.344ZM12 15.75a3.75 3.75 0 1 0 0-7.5 3.75 3.75 0 0 0 0 7.5Z"
+                                                    clip-rule="evenodd" />
+                                            </svg>
+                                            <span class="flex-1 whitespace-nowrap">Setting</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <form method="POST" action="{{ route('logout') }}">
                                             @csrf
                                             <button type="submit"
-                                            class="bg-[#b9ff66] hover:bg-[#b9ff66]/50 text-black text-sm/6 font-medium px-3 py-1 rounded-[40px] shadow transition duration-300">
-                                            Logout<span aria-hidden="true"></span>
-                                        </button>
-                                    </form> -->
+                                                class="flex items-center gap-3 w-full text-left px-6 py-2 rounded-lg hover:bg-white/5 transition duration-150 text-red-600">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                    fill="currentColor" class="size-6">
+                                                    <path fill-rule="evenodd"
+                                                        d="M7.5 3.75A1.5 1.5 0 0 0 6 5.25v13.5a1.5 1.5 0 0 0 1.5 1.5h6a1.5 1.5 0 0 0 1.5-1.5V15a.75.75 0 0 1 1.5 0v3.75a3 3 0 0 1-3 3h-6a3 3 0 0 1-3-3V5.25a3 3 0 0 1 3-3h6a3 3 0 0 1 3 3V9A.75.75 0 0 1 15 9V5.25a1.5 1.5 0 0 0-1.5-1.5h-6Zm5.03 4.72a.75.75 0 0 1 0 1.06l-1.72 1.72h10.94a.75.75 0 0 1 0 1.5H10.81l1.72 1.72a.75.75 0 1 1-1.06 1.06l-3-3a.75.75 0 0 1 0-1.06l3-3a.75.75 0 0 1 1.06 0Z"
+                                                        clip-rule="evenodd" />
+                                                </svg>
+                                                <span class="flex-1 whitespace-nowrap">Log Out</span>
+                                            </button>
+                                        </form>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 @else
-                <a href="{{ route('login') }}"
-                    class="bg-[#b9ff66] hover:bg-[#b9ff66]/50 text-black text-sm/6 font-medium px-3 py-1 rounded-[40px] shadow transition duration-300 mr-2">
-                    Login<span aria-hidden="true"></span></a>
-                <a href="{{ route('register') }}"
-                    class="bg-[#b9ff66] hover:bg-[#b9ff66]/50 text-black text-sm/6 font-medium px-3 py-1 rounded-[40px] shadow transition duration-300">
-                    Sign Up<span aria-hidden="true">&rarr;</span></a>
+                    <a href="{{ route('login') }}"
+                        class="bg-[#b9ff66] hover:bg-[#b9ff66]/50 text-black text-sm/6 font-medium px-3 py-1 rounded-[40px] shadow transition duration-300 mr-2">
+                        Login<span aria-hidden="true"></span></a>
+                    <a href="{{ route('register') }}"
+                        class="bg-[#b9ff66] hover:bg-[#b9ff66]/50 text-black text-sm/6 font-medium px-3 py-1 rounded-[40px] shadow transition duration-300">
+                        Sign Up<span aria-hidden="true">&rarr;</span></a>
                 @endauth
             </div>
         </nav>

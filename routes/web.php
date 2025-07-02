@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\Framework;
 use App\Http\Controllers\FrameworkController;
+use App\Http\Controllers\UserProgressController;
 use Doctrine\DBAL\Driver\Middleware;
 
 Route::get('/', function () {
@@ -78,3 +79,6 @@ Route::group(['prefix' => 'learn', 'middleware' => 'auth'], function () {
 // Route untuk menampilkan framework detail
 Route::get('/framework/{framework}', [FrameworkController::class, 'show'])
     ->name('framework.show');
+
+// Route untuk menampilkan progress user
+Route::get('/my-progress', [UserProgressController::class, 'index'])->middleware('auth')->name('user.progress');

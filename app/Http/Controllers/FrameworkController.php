@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 use App\Models\Frameworks;
 use App\Models\Chapters;
+use App\Models\Progress;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
 class FrameworkController extends Controller
@@ -15,6 +17,27 @@ class FrameworkController extends Controller
     {
         // Ambil framework berdasarkan slug
         $framework = Frameworks::where('slug', $frameworkSlug)->firstOrFail();
+
+        // Cek progress terakhir user di framework ini
+        $lastProgress = null;
+        if (Auth::check()) {
+            $chapterIds = Chapters::where('framework_id', $framework->id)->pluck('id');
+            $lastProgress = Progress::where('user_id', Auth::id())
+                ->whereIn('chapter_id', $chapterIds)
+                ->orderByDesc('updated_at')
+                ->first();
+        }
+
+        if ($lastProgress) {
+            // Redirect ke chapter terakhir yang dipelajari user
+            $chapter = Chapters::find($lastProgress->chapter_id);
+            if ($chapter) {
+                return redirect()->route('chapter.show', [
+                    'framework' => $framework->slug,
+                    'chapter' => $chapter->slug
+                ]);
+            }
+        }
         
         // Ambil chapter pertama (order = 1) dari framework tersebut
         $firstChapter = Chapters::where('framework_id', $framework->id)
@@ -47,6 +70,19 @@ class FrameworkController extends Controller
                           ->where('framework_id', $framework->id)
                           ->with('sections')
                           ->firstOrFail();
+
+        // Cek jika user sudah login
+        if (Auth::check()) {
+            Progress::firstOrCreate(
+                [
+                    'user_id' => Auth::id(),
+                    'chapter_id' => $chapter->id,
+                ],
+                [
+                    'is_completed' => true, // Atau false jika ingin manual selesai
+                ]
+            );
+        }
         
         // Ambil semua chapters untuk navigasi
         $allChapters = Chapters::where('framework_id', $framework->id)

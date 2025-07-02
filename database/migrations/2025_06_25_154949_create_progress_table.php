@@ -17,6 +17,9 @@ return new class extends Migration
             $table->foreignId('user_id')
                 ->constrained('users')
                 ->onDelete('cascade');
+            $table->foreignId('framework_id')
+                ->constrained('frameworks')
+                ->onDelete('cascade');
             $table->foreignId('chapter_id')
                 ->constrained('chapters')
                 ->onDelete('cascade');

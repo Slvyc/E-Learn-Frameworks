@@ -90,7 +90,7 @@
                     <div>
                         <p class="text-sm text-gray-400">Tutorial</p>
                         <h4 class="text-xl font-bold">CSS</h4>
-                        <p class="text-sm text-gray-300">1/135 Lessons • 0/676 Exercises • 0/1 Quiz</p>
+                        <p class="text-sm text-gray-300">1/135 Chapter</p>
                     </div>
                 </div>
                 <button
@@ -117,7 +117,7 @@
                     <div>
                         <p class="text-sm text-gray-400">Tutorial</p>
                         <h4 class="text-xl font-bold">CSS</h4>
-                        <p class="text-sm text-gray-300">1/135 Lessons • 0/676 Exercises • 0/1 Quiz</p>
+                        <p class="text-sm text-gray-300">1/135 Chapter</p>
                     </div>
                 </div>
                 <button
@@ -143,7 +143,7 @@
                     <div>
                         <p class="text-sm text-gray-400">Tutorial</p>
                         <h4 class="text-xl font-bold">CSS</h4>
-                        <p class="text-sm text-gray-300">1/135 Lessons • 0/676 Exercises • 0/1 Quiz</p>
+                        <p class="text-sm text-gray-300">1/135 Chapter</p>
                     </div>
                 </div>
                 <button

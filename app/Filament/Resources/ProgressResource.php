@@ -25,7 +25,23 @@ class ProgressResource extends Resource
     {
         return $form
             ->schema([
-                
+                Tables\Columns\TextColumn::make('user.name')
+                    ->label('User')
+                    ->searchable()
+                    ->sortable(),
+                Tables\Columns\TextColumn::make('chapter.title')
+                    ->label('Chapter')
+                    ->searchable()
+                    ->sortable(),
+                Tables\Columns\BooleanColumn::make('is_completed')
+                    ->label('Completed')
+                    ->trueIcon('heroicon-o-check-circle')
+                    ->falseIcon('heroicon-o-x-circle')
+                    ->sortable(),
+                Tables\Columns\TextColumn::make('created_at')
+                    ->dateTime()
+                    ->label('Created At')
+                    ->sortable(),
             ]);
     }
 

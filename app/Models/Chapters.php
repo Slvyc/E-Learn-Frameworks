@@ -23,7 +23,7 @@ class Chapters extends Model
 
     public function framework()
     {
-        return $this->belongsTo(Frameworks::class);
+       return $this->belongsTo(Frameworks::class, 'framework_id');
     }
     
 

@@ -25,11 +25,16 @@ class Frameworks extends Model
 
     public function chapters(): HasMany
     {
-        return $this->hasMany(Chapters::class);
+        return $this->hasMany(Chapters::class, 'framework_id');
     }
 
     public function sections(): HasMany
     {
         return $this->hasMany(Sections::class);
+    }
+
+    public function progress(): HasMany
+    {
+        return $this->hasMany(Progress::class, 'framework_id');
     }
 }
