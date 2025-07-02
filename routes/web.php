@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\Framework;
 use App\Http\Controllers\FrameworkController;
-use Doctrine\DBAL\Driver\Middleware;  
+use Doctrine\DBAL\Driver\Middleware;
 
 Route::get('/', function () {
     return view('home');
@@ -37,6 +37,14 @@ Route::get('/instalationLaravel', function () {
     return view('instalationLaravel');
 })->name('instalationLaravel');
 
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->name('dashboard');
+
+Route::get('/tutor', function () {
+    return view('tutor');
+})->name('tutor');
+
 Route::get('/sementara', function () {
     return view('learning.chapter1');
 })->name('sementara');
@@ -49,24 +57,24 @@ Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
 // Routes untuk learning functionality
 Route::group(['prefix' => 'learn', 'middleware' => 'auth'], function () {
-    
+
     // Route untuk tombol "Learn more" - langsung ke chapter 1
     Route::get('/{framework}/start', [FrameworkController::class, 'startLearning'])
-         ->name('learning.start');
-    
+        ->name('learning.start');
+
     // Route untuk menampilkan chapter
     Route::get('/{framework}/{chapter}', [FrameworkController::class, 'showChapter'])
-         ->name('chapter.show');
-    
+        ->name('chapter.show');
+
     // Route alternatif untuk langsung ke section pertama
     Route::get('/{framework}/begin', [FrameworkController::class, 'startLearningDirect'])
-         ->name('learning.begin');
-    
+        ->name('learning.begin');
+
     // Route untuk menampilkan section spesifik
     Route::get('/{framework}/{chapter}/section/{section}', [FrameworkController::class, 'showSection'])
-         ->name('learning.section');
+        ->name('learning.section');
 });
 
 // Route untuk menampilkan framework detail
 Route::get('/framework/{framework}', [FrameworkController::class, 'show'])
-     ->name('framework.show');
+    ->name('framework.show');
