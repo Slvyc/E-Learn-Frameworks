@@ -11,7 +11,12 @@ class Sections extends Model
         'chapter_id',
         'title',
         'content',
+        'content2',
+        'content3',
+        'content4',
         'code_sample',
+        'code_sample2',
+        'code_sample3',
         'order',
     ];
 

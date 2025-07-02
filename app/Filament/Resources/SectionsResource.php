@@ -63,6 +63,29 @@ class SectionsResource extends Resource
                     ->maxLength(255)
                     ->label('Contoh Kode'),
 
+                Forms\Components\Textarea::make('content2')
+                    ->label('Isi Konten 2')
+                    ->rows(10)
+                    ->columnSpanFull(),
+
+                Forms\Components\Textarea::make('code_sample2')
+                    ->maxLength(255)
+                    ->label('Contoh Kode 2'),
+
+                Forms\Components\Textarea::make('content3')
+                    ->label('Isi Konten 3')
+                    ->rows(10)
+                    ->columnSpanFull(),
+
+                Forms\Components\Textarea::make('code_sample3')
+                    ->maxLength(255)
+                    ->label('Contoh Kode 3'),
+
+                Forms\Components\Textarea::make('content4')
+                    ->label('Isi Konten 4')
+                    ->rows(10)
+                    ->columnSpanFull(),
+
                 Forms\Components\TextInput::make('order')
                     ->numeric()
                     ->default(0)
@@ -104,9 +127,50 @@ class SectionsResource extends Resource
                     ->searchable()
                     ->sortable(),
 
+                Tables\Columns\TextColumn::make('content2')
+                    ->label('Isi Konten 2')
+                    ->searchable()
+                    ->sortable()
+                    ->wrap()
+                    ->limit(100)
+                    ->tooltip(function (Tables\Columns\TextColumn $column): ?string {
+                        return $column->getState();
+                    }),
+                
+                Tables\Columns\TextColumn::make('code_sample2')
+                    ->label('Contoh Kode 2')
+                    ->searchable()
+                    ->sortable(),
+
+                Tables\Columns\TextColumn::make('content3')
+                    ->label('Isi Konten 3')
+                    ->searchable()
+                    ->sortable()
+                    ->wrap()
+                    ->limit(100)
+                    ->tooltip(function (Tables\Columns\TextColumn $column): ?string {
+                        return $column->getState();
+                    }),
+                
+                Tables\Columns\TextColumn::make('code_sample3')
+                    ->label('Contoh Kode 3')
+                    ->searchable()
+                    ->sortable(),
+
+                Tables\Columns\TextColumn::make('content4')
+                    ->label('Isi Konten 4')
+                    ->searchable()
+                    ->sortable()
+                    ->wrap()
+                    ->limit(100)
+                    ->tooltip(function (Tables\Columns\TextColumn $column): ?string {
+                        return $column->getState();
+                    }),
+
                 Tables\Columns\TextColumn::make('order')
                     ->label('Urutan')
                     ->sortable(),
+
             ])->filters([
                 //
             ])->headerActions([
