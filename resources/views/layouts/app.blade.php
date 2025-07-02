@@ -16,7 +16,7 @@
             <div class="flex lg:flex-1">
                 <a href="#" class="-m-1.5 p-1.5">
                     <span class="sr-only">E-Learn</span>
-                    <img class="h-12 w-auto" src="images/Logo E-Learn.png" alt="">
+                    <img class="h-12 w-auto" src="images/Logo Framework.png" alt="">
                 </a>
             </div>
             <div class="flex lg:hidden">
@@ -35,10 +35,8 @@
                 <a href="{{ route('framework') }}" class="text-sm/6 font-semibold text-white">Frameworks</a>
                 <a href="{{ route('about') }}" class="text-sm/6 font-semibold text-white">About</a>
                 <a href="{{ route("contact")}}" class="text-sm/6 font-semibold text-white">Contact</a>
-                <a href="{{ route("dashboard")}}" class="text-sm/6 font-semibold text-white">Dashboard</a>
-                <a href="{{ route("tutor")}}" class="text-sm/6 font-semibold text-white">tutor</a>
-                {{-- <a href="{{ route(" laravelTutorial")}}" class="text-sm/6 font-semibold text-white">Laravel</a>
-                <a href="{{ route(" instalationLaravel")}}" class="text-sm/6 font-semibold text-white">Laravel</a> --}}
+                {{-- <a href="{{ route(" dashboard")}}" class="text-sm/6 font-semibold text-white">Dashboard</a>
+                <a href="{{ route(" tutor")}}" class="text-sm/6 font-semibold text-white">tutor</a> --}}
             </div>
             {{-- cek apakah sudah login --}}
             <div class="hidden lg:flex lg:flex-1 lg:justify-end">
@@ -71,16 +69,20 @@
 
                                 <!-- Progress -->
                                 <div class="px-6 py-4 border-b border-white/10 space-y-2">
-                                    <p class="text-sm font-medium text-gray-300">Laravel • Tutorial</p>
+                                    <p class="text-sm font-medium text-gray-300">
+                                        {{ $lastFramework ? $lastFramework->name . ' • Tutorial' : 'Belum ada progress' }}
+                                    </p>
                                     <div class="w-full bg-white rounded-full h-2.5 overflow-hidden">
                                         <div class="bg-[#b9ff66] h-full text-[10px] text-black text-center leading-none rounded-full"
-                                            style="width: 45%">45%</div>
+                                            style="width: {{ $lastPercent ?? 0 }}%">
+                                            {{ $lastPercent ?? 0 }}%
+                                        </div>
                                     </div>
                                 </div>
 
                                 <!-- Menu Section -->
                                 <ul class="font-sm space-y-1">
-                                    <li><a href="#"
+                                    <li><a href="{{ route('user.dashboard')}}"
                                             class="flex items-center gap-3 px-6 py-2 rounded-lg hover:bg-white/5 transition duration-150 text-gray-300 hover:text-white">
                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
                                                 class="w-5 h-5 flex-shrink-0">
@@ -93,7 +95,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#"
+                                        <a href="{{ route('user.progress')}}"
                                             class="flex items-center gap-3 px-6 py-2 rounded-lg hover:bg-white/5 transition duration-150 text-gray-300 hover:text-white">
                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
                                                 class="size-6">
@@ -107,7 +109,7 @@
 
                                             <span class="flex-1 whitespace-nowrap">Tutorial</span>
                                         </a>
-                                        <a href="#"
+                                        <a href="{{ route('user.setting') }}"
                                             class="flex items-center gap-3 px-6 py-2 rounded-lg hover:bg-white/5 transition duration-150 text-gray-300 hover:text-white">
                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
                                                 class="size-6">
@@ -117,8 +119,6 @@
                                             </svg>
                                             <span class="flex-1 whitespace-nowrap">Setting</span>
                                         </a>
-                                    </li>
-                                    <li>
                                         <form method="POST" action="{{ route('logout') }}">
                                             @csrf
                                             <button type="submit"

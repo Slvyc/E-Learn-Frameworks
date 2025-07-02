@@ -5,20 +5,15 @@ use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\Framework;
 use App\Http\Controllers\FrameworkController;
 use App\Http\Controllers\UserProgressController;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\Learning\ChapterController;
+use App\Http\Controllers\Learning\SectionController;
+use App\Http\Controllers\UserSettingController;
 use Doctrine\DBAL\Driver\Middleware;
 
 Route::get('/', function () {
     return view('home');
 })->name('home');
-
-// Route::get('/framework', function () {
-//     return view('framework');
-// })->name('framework');
-
-// Route::get('/framework', function () {
-//     $frameworks = App\Models\Frameworks::all();
-//     return view('framework', compact('frameworks'));
-// })->name('framework');
 
 Route::get('/framework', [Framework::class, 'index'])->name('framework');
 
@@ -50,11 +45,18 @@ Route::get('/sementara', function () {
     return view('learning.chapter1');
 })->name('sementara');
 
+//route login register
 Route::get('/login', [AuthController::class, 'showLogin'])->name('login');
 Route::post('/login', [AuthController::class, 'login']);
 Route::get('/register', [AuthController::class, 'showRegister'])->name('register');
 Route::post('/register', [AuthController::class, 'register']);
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+
+// Route untuk mengelola user settings
+Route::middleware('auth')->group(function () {
+    Route::get('/setting', [UserSettingController::class, 'edit'])->name('user.setting');
+    Route::post('/setting', [UserSettingController::class, 'update'])->name('user.setting.update');
+});
 
 // Routes untuk learning functionality
 Route::group(['prefix' => 'learn', 'middleware' => 'auth'], function () {
@@ -80,5 +82,9 @@ Route::group(['prefix' => 'learn', 'middleware' => 'auth'], function () {
 Route::get('/framework/{framework}', [FrameworkController::class, 'show'])
     ->name('framework.show');
 
-// Route untuk menampilkan progress user
-Route::get('/my-progress', [UserProgressController::class, 'index'])->middleware('auth')->name('user.progress');
+
+//user route
+// Route untuk menampilkan progress user (alternatif)
+Route::get('/tutorial', [UserProgressController::class, 'index'])->middleware('auth')->name('user.progress');
+// rute dashboard
+Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth')->name('user.dashboard');

@@ -28,7 +28,6 @@
                         focus:border-green-500 focus:z-10 sm:text-sm mt-1">
                 </div>
             </div>
-
             <div>
                 <button type="submit" 
                     class="group relative w-full flex justify-center py-2 px-4 border border-transparent 
@@ -37,6 +36,14 @@
                     transition duration-150 ease-in-out">
                     Sign in
                 </button>
+            </div>
+            <div class="flex items-center justify-between mb-4">
+                <div></div>
+                <div class="text-sm">
+                    <a href="" class="font-medium text-green-600 hover:text-green-500">
+                        Forgot your password?
+                    </a>
+                </div>
             </div>
         </form>
         <p class="text-center text-sm text-gray-600">
