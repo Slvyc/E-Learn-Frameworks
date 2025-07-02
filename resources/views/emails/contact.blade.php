@@ -28,7 +28,7 @@
                         </svg>
                     </div>
                     <h3 class="font-bold text-lg -mt-2">Address</h3>
-                    <p class="-mt-2  text-sm">lorem,ywegirb,hadkajdajkda</p>
+                    <p class="-mt-2  text-sm">Banda Aceh</p>
                     <div class="flex items-center gap-6">
                         <svg class="w-10 h-10 text-black mt-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                             fill="currentColor" class="size-6">
@@ -38,7 +38,7 @@
                         </svg>
                     </div>
                     <h3 class="font-bold text-lg -mt-2">Phone</h3>
-                    <p class="-mt-2 text-sm">0836482759382</p>
+                    <p class="-mt-2 text-sm">+62-8236-2068-8738</p>
                     <div class="flex items-center gap-6">
                         <svg class="w-13 h-13 text-black mt-4" fill="black" stroke="white" stroke-width="2"
                             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -47,7 +47,7 @@
                         </svg>
                     </div>
                     <h3 class="font-bold text-lg -mt-2">Email</h3>
-                    <p class="-mt-2 text-sm">terserah@gmail.com</p>
+                    <p class="-mt-2 text-sm">elearnframework@gmail.com</p>
                 </div>
 
                 <div class="p-8 border-l bg-black border-gray-300 text-black md:col-span-3">
@@ -58,29 +58,45 @@
                         <p class="text-gray-400 mb-8">
                             If you have any...
                         </p>
-                        <form>
+
+                         @if(session('success'))
+                            <div class="bg-green-600 text-white p-2 rounded mb-4">
+                                {{ session('success') }}
+                            </div>
+                        @endif
+                        @if($errors->any())
+                            <div class="bg-red-600 text-white p-2 rounded mb-4">
+                                <ul class="list-disc pl-5">
+                                    @foreach($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif
+                        <form action="{{ route('contact.send') }}" method="POST">
+                            @csrf
                             <div class="mb-4">
                                 <label class="block text-white font-bold mb-2" for="name">Name</label>
-                                <input
+                                <input name="name"
                                     class="bg-[#141414] appearance-none focus:ring-1 focus:ring-[#b9ff66] focus:border-green-500 rounded w-full py-2 px-3 text-gray-700 leading-tight"
-                                    id="name" type="text" placeholder="Enter your name">
+                                    id="name" type="text" placeholder="Enter your name" value="{{ old('name') }}">
                             </div>
                             <div class="mb-4">
                                 <label class="block text-white font-bold mb-2" for="email">Email</label>
-                                <input
+                                <input name="email"
                                     class="bg-[#141414] appearance-none focus:ring-1 focus:ring-[#b9ff66] focus:border-green-500 rounded w-full py-2 px-3 text-gray-700 leading-tight"
-                                    id="email" type="email" placeholder="Enter your email">
+                                    id="email" type="email" placeholder="Enter your email" value="{{ old('email') }}">
                             </div>
                             <div class="mb-4">
                                 <label class="block text-white font-bold mb-2" for="message">Message</label>
-                                <textarea
+                                <textarea name="message"
                                     class="bg-[#141414] appearance-none focus:ring-1 focus:ring-[#b9ff66] focus:border-green-500 rounded w-full py-2 px-3 text-gray-700 leading-tight"
-                                    id="message" rows="6" placeholder="Enter your message"></textarea>
+                                    id="message" rows="6" placeholder="Enter your message">{{ old('message') }}</textarea>
                             </div>
                             <div class="flex justify-end">
                                 <button
                                     class="bg-[#b9ff66] hover:bg-[#b9ff66]/50 text-black text-sm/6 font-medium px-3 py-1 rounded-[40px]"
-                                    type="button">
+                                    type="submit">
                                     Send
                                 </button>
                             </div>

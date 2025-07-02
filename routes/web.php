@@ -9,6 +9,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\Learning\ChapterController;
 use App\Http\Controllers\Learning\SectionController;
 use App\Http\Controllers\UserSettingController;
+use App\Http\Controllers\ContactController;
 use Doctrine\DBAL\Driver\Middleware;
 
 Route::get('/', function () {
@@ -21,9 +22,8 @@ Route::get('/about', function () {
     return view('about');
 })->name('about');
 
-Route::get('/contact', function () {
-    return view('contact');
-})->name('contact');
+Route::get('/contact', [ContactController::class, 'index'])->name('contact');
+Route::post('/contact/send', [ContactController::class, 'send'])->name('contact.send');
 
 Route::get('/laravelTutorial', function () {
     return view('laravelTutorial');
