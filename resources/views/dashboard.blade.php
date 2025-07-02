@@ -4,10 +4,10 @@
 
 <!-- sidebar -->
 <aside
-    class="fixed top-20 left-0 z-40 w-64 h-screen transition-transform -translate-x-full bg-[#141414]/80 border-r-4 border-[#b9ff66] rounded sm:translate-x-0 dark:bg-[#141414]/80 dark:border-[#b9ff66]"
+    class="fixed top-30 left-0 z-40 w-64 h-screen transition-transform -translate-x-full  border-r-4 border-[#b9ff66] rounded sm:translate-x-0 dark:border-[#b9ff66]"
     aria-label="Sidebar">
     <div
-        class="h-full pt-5 pb-4 py-4 m-4 overflow-y-auto bg-[#141414]/80 text-white rounded-2xl shadow-2xl ring-1 ring-white/5 backdrop-blur-2xl border border-white/10 ">
+        class="h-full pb-4 -mt-0 py-4 m-5 overflow-y-auto bg-[#141414]/80 text-white rounded-2xl shadow-2xl ring-1 ring-white/5 backdrop-blur-2xl border border-white/10 ">
         <ul class="space-y-2 font-medium m-4">
             <p class="text-sm text-gray-400 uppercase tracking-wide mb-2">Overview
                 <li>

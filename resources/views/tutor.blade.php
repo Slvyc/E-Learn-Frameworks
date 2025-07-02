@@ -4,10 +4,10 @@
 
 <!-- sidebar -->
 <aside
-    class="fixed top-20 left-0 z-40 w-64 h-screen transition-transform -translate-x-full bg-[#141414]/80 border-r-4 border-[#b9ff66] rounded sm:translate-x-0 dark:bg-[#141414]/80 dark:border-[#b9ff66]"
+    class="fixed top-30 left-0 z-40 w-64 h-screen transition-transform -translate-x-full  border-r-4 border-[#b9ff66] rounded sm:translate-x-0 dark:border-[#b9ff66]"
     aria-label="Sidebar">
     <div
-        class="h-full pt-5 pb-4 py-4 m-4 overflow-y-auto bg-[#141414]/80 text-white rounded-2xl shadow-2xl ring-1 ring-white/5 backdrop-blur-2xl border border-white/10 ">
+        class="h-full pb-4 -mt-0 py-4 m-5 overflow-y-auto bg-[#141414]/80 text-white rounded-2xl shadow-2xl ring-1 ring-white/5 backdrop-blur-2xl border border-white/10 ">
         <ul class="space-y-2 font-medium m-4">
             <p class="text-sm text-gray-400 uppercase tracking-wide mb-2">Overview
                 <li>
@@ -73,64 +73,83 @@
         <!-- Tutorial Cards -->
         <div class="space-y-6">
             <div
-                class="bg-white/5 p-5 rounded-2xl shadow-lg flex items-center hover:bg-white/10 transition-all relative">
-                <div class="relative w-20 h-20">
-                    <svg class="absolute top-0 left-0 w-full h-full" viewBox="0 0 36 36">
-                        <circle class="text-gray-500/20" cx="18" cy="18" r="16" fill="none" stroke="currentColor"
-                            stroke-width="3.5" />
-                        <circle class="text-[#b9ff66]" cx="18" cy="18" r="16" fill="none" stroke="currentColor"
-                            stroke-width="2" stroke-dasharray="100" stroke-dashoffset="30" stroke-linecap="round"
-                            transform="rotate(-90 18 18)" />
-                    </svg>
-                    <img src="#"
-                        class="w-14 h-14 bg-white/5 p-2 rounded-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10"
-                        alt="CSS">
+                class="bg-white/5 p-5 rounded-2xl shadow-lg flex items-center justify-between hover:bg-white/10 transition-all relative">
+                <div class="flex items-center gap-4">
+                    <div class="relative w-20 h-20">
+                        <svg class="absolute top-0 left-0 w-full h-full" viewBox="0 0 36 36">
+                            <circle class="text-gray-500/20" cx="18" cy="18" r="16" fill="none" stroke="currentColor"
+                                stroke-width="3.5" />
+                            <circle class="text-[#b9ff66]" cx="18" cy="18" r="16" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-dasharray="100" stroke-dashoffset="30" stroke-linecap="round"
+                                transform="rotate(-90 18 18)" />
+                        </svg>
+                        <img src="#"
+                            class="w-14 h-14 bg-white/5 p-2 rounded-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10"
+                            alt="CSS">
+                    </div>
+                    <div>
+                        <p class="text-sm text-gray-400">Tutorial</p>
+                        <h4 class="text-xl font-bold">CSS</h4>
+                        <p class="text-sm text-gray-300">1/135 Lessons • 0/676 Exercises • 0/1 Quiz</p>
+                    </div>
                 </div>
-                <div class="ml-5">
-                    <p class="text-sm text-gray-400">Tutorial</p>
-                    <h4 class="text-xl font-bold">CSS</h4>
-                    <p class="text-sm text-gray-300">1/135 Lessons • 0/676 Exercises • 0/1 Quiz</p>
+                <button
+                    class="text-xs font-semibold bg-[#b9ff66] text-black px-3 py-1.5 rounded-md hover:bg-[#b9ff66]/80 transition">
+                    Continue Learn
+                </button>
+            </div>
+
+            <div
+                class="bg-white/5 p-5 rounded-2xl shadow-lg flex items-center justify-between hover:bg-white/10 transition-all relative">
+                <div class="flex items-center gap-4">
+                    <div class="relative w-20 h-20">
+                        <svg class="absolute top-0 left-0 w-full h-full" viewBox="0 0 36 36">
+                            <circle class="text-gray-500/20" cx="18" cy="18" r="16" fill="none" stroke="currentColor"
+                                stroke-width="3.5" />
+                            <circle class="text-[#b9ff66]" cx="18" cy="18" r="16" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-dasharray="100" stroke-dashoffset="30" stroke-linecap="round"
+                                transform="rotate(-90 18 18)" />
+                        </svg>
+                        <img src="#"
+                            class="w-14 h-14 bg-white/5 p-2 rounded-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10"
+                            alt="CSS">
+                    </div>
+                    <div>
+                        <p class="text-sm text-gray-400">Tutorial</p>
+                        <h4 class="text-xl font-bold">CSS</h4>
+                        <p class="text-sm text-gray-300">1/135 Lessons • 0/676 Exercises • 0/1 Quiz</p>
+                    </div>
                 </div>
+                <button
+                    class="text-xs font-semibold bg-[#b9ff66] text-black px-3 py-1.5 rounded-md hover:bg-[#b9ff66]/80 transition">
+                    Continue Learn
+                </button>
             </div>
             <div
-                class="bg-white/5 p-5 rounded-2xl shadow-lg flex items-center hover:bg-white/10 transition-all relative">
-                <div class="relative w-20 h-20">
-                    <svg class="absolute top-0 left-0 w-full h-full" viewBox="0 0 36 36">
-                        <circle class="text-gray-500/20" cx="18" cy="18" r="16" fill="none" stroke="currentColor"
-                            stroke-width="3.5" />
-                        <circle class="text-[#b9ff66]" cx="18" cy="18" r="16" fill="none" stroke="currentColor"
-                            stroke-width="2" stroke-dasharray="100" stroke-dashoffset="30" stroke-linecap="round"
-                            transform="rotate(-90 18 18)" />
-                    </svg>
-                    <img src="#"
-                        class="w-14 h-14 bg-white/5 p-2 rounded-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10"
-                        alt="CSS">
+                class="bg-white/5 p-5 rounded-2xl shadow-lg flex items-center justify-between hover:bg-white/10 transition-all relative">
+                <div class="flex items-center gap-4">
+                    <div class="relative w-20 h-20">
+                        <svg class="absolute top-0 left-0 w-full h-full" viewBox="0 0 36 36">
+                            <circle class="text-gray-500/20" cx="18" cy="18" r="16" fill="none" stroke="currentColor"
+                                stroke-width="3.5" />
+                            <circle class="text-[#b9ff66]" cx="18" cy="18" r="16" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-dasharray="100" stroke-dashoffset="30" stroke-linecap="round"
+                                transform="rotate(-90 18 18)" />
+                        </svg>
+                        <img src="#"
+                            class="w-14 h-14 bg-white/5 p-2 rounded-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10"
+                            alt="CSS">
+                    </div>
+                    <div>
+                        <p class="text-sm text-gray-400">Tutorial</p>
+                        <h4 class="text-xl font-bold">CSS</h4>
+                        <p class="text-sm text-gray-300">1/135 Lessons • 0/676 Exercises • 0/1 Quiz</p>
+                    </div>
                 </div>
-                <div class="ml-5">
-                    <p class="text-sm text-gray-400">Tutorial</p>
-                    <h4 class="text-xl font-bold">CSS</h4>
-                    <p class="text-sm text-gray-300">1/135 Lessons • 0/676 Exercises • 0/1 Quiz</p>
-                </div>
-            </div>
-            <div
-                class="bg-white/5 p-5 rounded-2xl shadow-lg flex items-center hover:bg-white/10 transition-all relative">
-                <div class="relative w-20 h-20">
-                    <svg class="absolute top-0 left-0 w-full h-full" viewBox="0 0 36 36">
-                        <circle class="text-gray-500/20" cx="18" cy="18" r="16" fill="none" stroke="currentColor"
-                            stroke-width="3.5" />
-                        <circle class="text-[#b9ff66]" cx="18" cy="18" r="16" fill="none" stroke="currentColor"
-                            stroke-width="2" stroke-dasharray="100" stroke-dashoffset="30" stroke-linecap="round"
-                            transform="rotate(-90 18 18)" />
-                    </svg>
-                    <img src="#"
-                        class="w-14 h-14 bg-white/5 p-2 rounded-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10"
-                        alt="CSS">
-                </div>
-                <div class="ml-5">
-                    <p class="text-sm text-gray-400">Tutorial</p>
-                    <h4 class="text-xl font-bold">CSS</h4>
-                    <p class="text-sm text-gray-300">1/135 Lessons • 0/676 Exercises • 0/1 Quiz</p>
-                </div>
+                <button
+                    class="text-xs font-semibold bg-[#b9ff66] text-black px-3 py-1.5 rounded-md hover:bg-[#b9ff66]/80 transition">
+                    Continue Learn
+                </button>
             </div>
 
         </div>
