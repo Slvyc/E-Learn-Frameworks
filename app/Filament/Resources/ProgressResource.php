@@ -21,6 +21,11 @@ class ProgressResource extends Resource
 
     protected static ?string $navigationGroup = 'User Management';
 
+    public static function canCreate(): bool
+    {
+        return false;
+    }
+
     public static function form(Form $form): Form
     {
         return $form
@@ -73,19 +78,16 @@ class ProgressResource extends Resource
             ])->filters([
                 //
             ])->headerActions([
-                Tables\Actions\CreateAction::make(),
+                //
             ])
             ->filters([
                 //
             ])
             ->actions([
-                Tables\Actions\EditAction::make(),
-                Tables\Actions\DeleteAction::make(),
+                //
             ])
             ->bulkActions([
-                Tables\Actions\BulkActionGroup::make([
-                    Tables\Actions\DeleteBulkAction::make(),
-                ]),
+                //
             ]);
     }
 
