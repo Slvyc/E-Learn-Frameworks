@@ -67,11 +67,13 @@
 
             <!-- Progress Overview -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
-                <div class="bg-white/10 backdrop-blur-sm rounded-xl p-5 hover:scale-[1.02] transition">
+                <div
+                    class="bg-white/10 backdrop-blur-5xl border-t border-white/40 rounded-xl p-5 hover:scale-[1.02] transition">
                     <p class="text-sm text-gray-300">Tutorial Yang Diikuti</p>
                     <p class="text-2xl font-bold">{{ $tutorialCount }}</p>
                 </div>
-                <div class="bg-white/10 backdrop-blur-sm rounded-xl p-5 hover:scale-[1.02] transition">
+                <div
+                    class="bg-white/10 backdrop-blur-5xl border-t border-white/40 rounded-xl p-5 hover:scale-[1.02] transition">
                     <p class="text-sm text-gray-300">Completed</p>
                     <p class="text-2xl font-bold">{{ $tutorialCount }}</p>
                 </div>
@@ -82,7 +84,7 @@
                 <div class="lg:col-span-4 space-y-6">
                     <!-- Continue Learningnya -->
                     <div
-                        class="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/10 shadow-xl hover:shadow-2xl transition">
+                        class="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border-t border-white/40 shadow-xl hover:shadow-2xl transition">
                         <div class="flex justify-between items-center">
                             <div>
                                 <p class="text-sm text-gray-400 mb-3">Continue Learning</p>
@@ -90,12 +92,13 @@
                                     <h3 class="text-2xl font-bold">{{ $lastFramework->name }}</h3>
                                     <div class="mt-4">
                                         <div class="w-[370px] bg-[#414141] h-2 rounded-full">
-                                            <div class="bg-[#b9ff66] h-2 rounded-full" style="width: {{ $lastPercent }}%"></div>
+                                            <div class="bg-[#b9ff66] h-2 rounded-full" style="width: {{ $lastPercent }}%">
+                                            </div>
                                         </div>
                                         <p class="text-sm text-gray-400 mt-3">{{ $lastPercent }}% completed</p>
                                     </div>
-                                    @if($lastPercent < 100)
-                                        <a href="{{ route('chapter.show', ['framework' => $lastFramework->slug, 'chapter' => $lastChapter->slug]) }}">
+                                    @if($lastPercent < 100) <a
+                                            href="{{ route('chapter.show', ['framework' => $lastFramework->slug, 'chapter' => $lastChapter->slug]) }}">
                                             <button
                                                 class="mt-4 bg-[#b9ff66] text-black font-semibold px-5 py-2 rounded-lg hover:bg-[#b9ff66]/80 transition">
                                                 Continue Learn
@@ -103,7 +106,8 @@
                                         </a>
                                     @else
                                         <button
-                                            class="mt-4 bg-gray-500 text-white font-semibold px-5 py-2 rounded-lg cursor-not-allowed" disabled>
+                                            class="mt-4 bg-gray-500 text-white font-semibold px-5 py-2 rounded-lg cursor-not-allowed"
+                                            disabled>
                                             Completed
                                         </button>
                                     @endif
@@ -126,11 +130,12 @@
                 <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-2 gap-6">
                     @foreach($recommendedFrameworks as $framework)
                         <a href="{{ route('learning.start', ['framework' => $framework->slug]) }}"
-                            class="flex justify-between items-center bg-white/10 border border-white/10 rounded-xl p-4 shadow-lg backdrop-blur-xl hover:bg-white/20 transition-all">
+                            class="flex justify-between items-center bg-white/10 border border-white/40 rounded-xl p-4 shadow-lg backdrop-blur-xl hover:bg-white/20 transition-all">
                             <div>
                                 <h5 class="text-lg font-bold text-white">{{ $framework->name }}</h5>
                                 <p class="text-sm text-gray-400">{{ $framework->description ?? '-' }}</p>
-                                <span class="mt-2 inline-block text-[#b9ff66] text-sm font-medium hover:underline">Start →</span>
+                                <span class="mt-2 inline-block text-[#b9ff66] text-sm font-medium hover:underline">Start
+                                    →</span>
                             </div>
                             <img src="{{ asset('storage/' . $framework->logo) }}"
                                 class="w-12 h-12 object-contain bg-black/20 rounded-full p-2" alt="{{ $framework->name }}">

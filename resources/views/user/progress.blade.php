@@ -52,7 +52,7 @@
             <div class="flex justify-between items-center mb-6">
                 <div class="flex gap-4 mb-3">
                     <button
-                        class="bg-white/10 px-4 py-2 rounded-xl text-sm text-white font-medium backdrop-blur-md hover:bg-[#b9ff66]/20 transition">All</button>
+                        class="bg-white/10 px-4 py-2 rounded-xl border-t border-white/40 text-sm text-white font-medium backdrop-blur-md hover:bg-[#b9ff66]/20 transition">All</button>
                 </div>
                 <div class="flex gap-2">
                     <form method="GET" action="{{ route('user.progress') }}" class="flex gap-2">
@@ -68,7 +68,7 @@
             <div class="space-y-6">
                 @foreach($frameworkProgress as $fp)
                     <div
-                        class="bg-white/5 p-5 rounded-2xl shadow-lg flex items-center justify-between hover:bg-white/10 transition-all relative">
+                        class="bg-white/5 p-5 rounded-2xl border-t border-white/40 shadow-lg flex items-center justify-between hover:bg-white/10 transition-all relative">
                         <div class="flex items-center gap-4">
                             <div class="relative w-20 h-20">
                                 <svg class="absolute top-0 left-0 w-full h-full" viewBox="0 0 36 36">
