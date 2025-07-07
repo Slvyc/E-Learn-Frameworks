@@ -17,7 +17,7 @@ class ProgressResource extends Resource
 {
     protected static ?string $model = Progress::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-chart-bar';
 
     protected static ?string $navigationGroup = 'User Management';
 

@@ -17,7 +17,7 @@ class ChaptersResource extends Resource
 {
     protected static ?string $model = Chapters::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-book-open';
     protected static ?string $navigationGroup = 'Manajemen Data';
 
     public static function form(Form $form): Form

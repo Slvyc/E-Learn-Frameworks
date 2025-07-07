@@ -1,11 +1,25 @@
-@extends('layouts.app')
-@section('content')
-    <div class="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>E-Learn</title>
+    @vite('resources/css/app.css')
+</head>
+
+<body class="bg-[#141414]/80">
+    <div class="min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
         <div class="max-w-md w-full space-y-8 bg-white p-8 rounded-lg shadow-md">
             <div>
-                <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900">
-                    Welcome Back
-                </h2>
+                <div class="flex justify-center mt-6">
+                    <a href="{{ url('/') }}">
+                        <div class="h-20 w-20 rounded-full overflow-hidden flex items-center justify-center bg-black mx-auto mb-2">
+                            <img src="{{ asset('images/Logo Framework.png') }}" alt="E-Learn Logo" class="h-16 w-16 object-cover">
+                        </div>
+                    </a>
+                </div>
                 <p class="mt-2 text-center text-sm text-gray-600">
                     Please sign in to your account
                 </p>
@@ -39,8 +53,7 @@
                             style="display:inline"> Login with Google
                     </a>
                 </div>
-                <div class="flex items-center justify-between mb-4">
-                    <div></div>
+                <div class="flex justify-end mb-2">
                     <div class="text-sm">
                         <a href="" class="font-medium text-green-600 hover:text-green-500">
                             Forgot your password?
@@ -56,4 +69,9 @@
             </p>
         </div>
     </div>
-@endsection
+
+    @vite('resources/js/app.js')
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+</body>
+
+</html>

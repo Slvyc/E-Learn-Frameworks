@@ -17,7 +17,7 @@ class FrameworksResource extends Resource
 {
     protected static ?string $model = Frameworks::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-cpu-chip';
     protected static ?string $navigationGroup = 'Manajemen Data';
 
     public static function form(Form $form): Form
