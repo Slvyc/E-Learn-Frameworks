@@ -34,7 +34,7 @@
                         <li>
                             <a href="{{ route('chapter.show', [$framework->slug, $chap->slug]) }}"
                                 class=" flex items-center p-1 text-sm rounded-lg group {{ $chap->id == $chapter->id
-                    ? 'bg-[#b9ff66] text-black font-bold'
+                    ? 'bg-[#b9ff66] text-black'
                     : 'text-gray-900 bg-white/5 dark:text-white hover:bg-[#b9ff66]/20 dark:hover:bg-[#b9ff66] hover:text-black group' }}">
                                 <span class="ms-3 group-hover:text-black group">
                                     <span>{{  $chap->order . '.' }}</span>&nbsp;{{ $chap->title }}
