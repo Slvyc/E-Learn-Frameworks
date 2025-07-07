@@ -54,7 +54,6 @@ class SectionsResource extends Resource
                     ->label('Judul'),
 
                 Forms\Components\Textarea::make('content')
-                    ->required()
                     ->label('Isi Konten')
                     ->rows(10)
                     ->columnSpanFull(),
