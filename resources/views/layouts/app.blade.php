@@ -199,7 +199,7 @@
     {{-- content end --}}
     </div>
     {{-- footer start --}}
-    <footer class="relative bg-[#141414] text-white z-40">
+    <footer class="relative bg-white/0.5 text-white backdrop-blur-xl border-t-2 border-[#b9ff66] z-40">
         <div class="mx-auto max-w-7xl overflow-hidden px-6 py-20 sm:py-24 lg:px-8">
             <nav class="-mb-6 flex flex-wrap justify-center gap-x-12 gap-y-3 text-sm/6" aria-label="Footer">
                 <a href="#" class="text-white-600 hover:text-[#b9ff66]">Home</a>

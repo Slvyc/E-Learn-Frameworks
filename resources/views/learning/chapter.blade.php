@@ -21,26 +21,27 @@
 
     <!-- sidebar -->
     <aside
-        class="fixed top-20 left-0 z-40 w-64 h-screen bg-[#141414] transition-transform -translate-x-full  border-r-4 border-[#b9ff66] rounded sm:translate-x-0 dark:border-[#b9ff66]">
+        class="scrollbar fixed overflow-y-auto mb-5 top-24 left-0 z-40 w-64 h-screen bg-[#141414] transition-transform -translate-x-full rounded sm:translate-x-0 dark:border-[#b9ff66]">
         <div
-            class="h-full pb-4 pt-2 py-4 m-3 mt-5 overflow-y-auto bg-[#141414]/80 text-white rounded-2xl shadow-2xl ring-1 ring-white/5 backdrop-blur-2xl border border-white/10 ">
+            class="h-200 pb-4 pt-2 py-10 mx-2 mb-30 bg-[#141414]/80 text-white rounded-2xl shadow-2xl ring-1 ring-white/5 backdrop-blur-2xl border border-white/10 ">
             <a href="#" class="flex items-center ps-5">
                 <span
                     class="text-sm text-gray-400 uppercase font-semibold tracking-wide mt-5 mb-2">{{ $framework->name . " Chapters" }}</span>
             </a>
-            <ul class="space-y-3 font-medium px-4 pt-2">
+            <ul class="space-y-3 px-2 pt-2">
                 @foreach($allChapters as $chap)
-                    <li>
-                        {{--
-                    <li class="{{ $chap->id == $chapter->id ? 'bg-[#b9ff66] text-black font-bold' : '' }}"> --}}
-                        <a href="{{ route('chapter.show', [$framework->slug, $chap->slug]) }}"
-                            class="flex items-center p-2 text-sm text-gray-900 bg-white/5 rounded-lg dark:text-white hover:bg-[#b9ff66]/20 dark:hover:bg-[#b9ff66] hover:text-black group">
-                            <span class="ms-3 group-hover:text-black group">
-                                <span
-                                    class="font-semibold uppercase">{{ "Chapter " . $chap->order . '.' }}</span>&nbsp;{{ $chap->title }}
-                            </span>
-                        </a>
-                    </li>
+
+                        <li>
+                            <a href="{{ route('chapter.show', [$framework->slug, $chap->slug]) }}"
+                                class=" flex items-center p-1 text-sm rounded-lg group {{ $chap->id == $chapter->id
+                    ? 'bg-[#b9ff66] text-black font-bold'
+                    : 'text-gray-900 bg-white/5 dark:text-white hover:bg-[#b9ff66]/20 dark:hover:bg-[#b9ff66] hover:text-black group' }}">
+                                <span class="ms-3 group-hover:text-black group">
+                                    <span>{{  $chap->order . '.' }}</span>&nbsp;{{ $chap->title }}
+                                </span>
+                            </a>
+                        </li>
+
                 @endforeach
             </ul>
         </div>
@@ -57,7 +58,6 @@
                         <h2 class="text-2xl text-white font-semibold"><span
                                 class="text-[#b9ff66]">#</span>&nbsp;{{ $section->title }}
                         </h2>
-                        {{-- content 1 --}}
                         <p>
                             {!! nl2br(e($section->content)) !!}
                         </p>
@@ -72,7 +72,7 @@
                                         </span>
                                         <!-- Gunakan id unik untuk setiap code -->
                                         <button class="copy-btn" data-clipboard-target="#code-{{ $section->id }}">
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="#414141" class="size-6">
+                                            <svg xmlns=" http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="#414141" class="size-6">
                                                 <path
                                                     d="M7 3.5A1.5 1.5 0 0 1 8.5 2h3.879a1.5 1.5 0 0 1 1.06.44l3.122 3.12A1.5 1.5 0 0 1 17 6.622V12.5a1.5 1.5 0 0 1-1.5 1.5h-1v-3.379a3 3 0 0 0-.879-2.121L10.5 5.379A3 3 0 0 0 8.379 4.5H7v-1Z" />
                                                 <path
@@ -157,6 +157,7 @@
                         <p>
                             {!! nl2br(e($section->content4)) !!}
                         </p>
+
                     </section>
                 @endforeach
             @else

@@ -49,7 +49,31 @@ class ProgressResource extends Resource
     {
         return $table
             ->columns([
-
+                Tables\Columns\TextColumn::make('user.name')
+                    ->label('User')
+                    ->searchable()
+                    ->sortable(),
+                Tables\Columns\TextColumn::make('framework.name')
+                    ->label('Framework')
+                    ->searchable()
+                    ->sortable(),
+                Tables\Columns\TextColumn::make('chapter.title')
+                    ->label('Chapter')
+                    ->searchable()
+                    ->sortable(),
+                Tables\Columns\BooleanColumn::make('is_completed')
+                    ->label('Completed')
+                    ->trueIcon('heroicon-o-check-circle')
+                    ->falseIcon('heroicon-o-x-circle')
+                    ->sortable(),
+                Tables\Columns\TextColumn::make('created_at')
+                    ->dateTime()
+                    ->label('Created At')
+                    ->sortable(),
+            ])->filters([
+                //
+            ])->headerActions([
+                Tables\Actions\CreateAction::make(),
             ])
             ->filters([
                 //
