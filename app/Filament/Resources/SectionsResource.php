@@ -60,7 +60,6 @@ class SectionsResource extends Resource
                     ->columnSpanFull(),
 
                 Forms\Components\Textarea::make('code_sample')
-                    ->maxLength(255)
                     ->label('Contoh Kode'),
 
                 Forms\Components\Textarea::make('content2')
@@ -69,7 +68,6 @@ class SectionsResource extends Resource
                     ->columnSpanFull(),
 
                 Forms\Components\Textarea::make('code_sample2')
-                    ->maxLength(255)
                     ->label('Contoh Kode 2'),
 
                 Forms\Components\Textarea::make('content3')
@@ -78,7 +76,6 @@ class SectionsResource extends Resource
                     ->columnSpanFull(),
 
                 Forms\Components\Textarea::make('code_sample3')
-                    ->maxLength(255)
                     ->label('Contoh Kode 3'),
 
                 Forms\Components\Textarea::make('content4')
