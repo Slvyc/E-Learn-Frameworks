@@ -1,3 +1,7 @@
+@php
+    $hideFooter = true;
+@endphp
+
 @extends('layouts.app')
 
 @section('title', $chapter->title . ' - ' . $framework->name)
@@ -11,7 +15,7 @@
             <div class="absolute inset-0 bg-gradient-to-r from-black to-white/20"></div>
         </div>
 
-        <div class="relative z-10 flex flex-col items-start justify-center h-full pl-78 mt-8 text-left">
+        <div class="relative z-10 flex flex-col items-start justify-center h-full pl-105 mt-8 text-left">
             <h1 class="text-white text-4xl md:text-5xl font-bold max-w-xl">
                 {{ $framework->name . " Tutorial" }}
             </h1>
@@ -21,21 +25,20 @@
 
     <!-- sidebar -->
     <aside
-        class="scrollbar fixed overflow-y-auto mb-5 top-24 left-0 z-40 w-64 h-screen bg-[#141414] transition-transform -translate-x-full rounded sm:translate-x-0 dark:border-[#b9ff66]">
-        <div
-            class="h-200 pb-4 pt-2 py-10 mx-2 mb-30 bg-[#141414]/80 text-white rounded-2xl shadow-2xl ring-1 ring-white/5 backdrop-blur-2xl border border-white/10 ">
+        class="overflow-y-scroll scrollbar fixed pb-30 top-24 left-0 z-40 w-90 h-full bg-[#141414] text-white shadow-2xl ring-1 ring-white/5 backdrop-blur-2xl  transtion-transform -translate-x-full sm:translate-x-0 dark:border-[#b9ff66]">
+        <div>
             <a href="#" class="flex items-center ps-5">
                 <span
-                    class="text-sm text-gray-400 uppercase font-semibold tracking-wide mt-5 mb-2">{{ $framework->name . " Chapters" }}</span>
+                    class="text-md text-gray-400 uppercase font-semibold tracking-wide mt-5 mb-2">{{ $framework->name . " Chapters" }}</span>
             </a>
-            <ul class="space-y-3 px-2 pt-2">
+            <ul class="space-y-3 px-8 pt-2">
                 @foreach($allChapters as $chap)
 
                         <li>
                             <a href="{{ route('chapter.show', [$framework->slug, $chap->slug]) }}"
-                                class=" flex items-center p-1 text-sm rounded-lg group {{ $chap->id == $chapter->id
+                                class="flex items-center p-2 text-sm font-semibold rounded-lg group border border-white/10 {{ $chap->id == $chapter->id
                     ? 'bg-[#b9ff66] text-black'
-                    : 'text-gray-900 bg-white/5 dark:text-white hover:bg-[#b9ff66]/20 dark:hover:bg-[#b9ff66] hover:text-black group' }}">
+                    : 'text-gray-900 bg-white/1 dark:text-white hover:bg-[#b9ff66]/20 dark:hover:bg-[#b9ff66] hover:text-black group' }}">
                                 <span class="ms-3 group-hover:text-black group">
                                     <span>{{  $chap->order . '.' }}</span>&nbsp;{{ $chap->title }}
                                 </span>
@@ -48,7 +51,7 @@
     </aside>
 
     <!-- Main -->
-    <main class="relative z-20 bg-[#141414] pl-64">
+    <main class="relative z-20 bg-[#141414] pl-90">
         <div class="max-w-screen-xl mx-auto px-15 py-10 text-white space-y-8">
             {{-- <h1 class="text-3xl font-semibold">Laravel Instalation {{ $framework->name . " Chapters" }}</h1> --}}
 

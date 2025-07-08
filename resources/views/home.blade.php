@@ -44,7 +44,7 @@
         <div class="max-w-5xl mx-auto text-center space-y-6">
             <h2 class="text-2xl font-bold">Kenapa Memilih Platform Kami?</h2>
             <p class="text-gray-300 max-w-3xl mx-auto">
-                Kamikumpulkan berbagai framework e-learning khusus untuk belajar coding, lengkap dengan fitur interaktif
+                Kami kumpulkan berbagai framework e-learning khusus untuk belajar coding, lengkap dengan fitur interaktif
                 yang bikin proses belajar jadi lebih mudah dan menyenangkan.
             </p>
             <div class="mt-10 mb-5">
@@ -68,29 +68,29 @@
                     </div>
                     <h3 class="text-lg font-semibold mt-4">Laravel</h3>
                     <p class="text-sm text-gray-400 max-w-xs mt-2">
-                        Body text for whatever you'd like to add more to the subheading.
+                        An elegant and expressive PHP framework designed for building modern web applications quickly and efficiently.
                     </p>
                 </a>
 
                 <!-- Card 2 -->
                 <a href="{{ route('framework') }}" class="flex flex-col items-center text-center">
                     <div class="bg-white rounded-xl w-70 h-70 flex items-center justify-center">
-                        <img src="{{ asset('images/bg-tools1.png') }}" alt="Node.js" class="h-60 ">
+                        <img src="{{ asset('images/frameworks/logos/react.png') }}" alt="Node.js" class="h-60 ">
                     </div>
-                    <h3 class="text-lg font-semibold mt-4">Node.js</h3>
+                    <h3 class="text-lg font-semibold mt-4">React JS</h3>
                     <p class="text-sm text-gray-400 max-w-xs mt-2">
-                        Body text for whatever you'd like to expand on the main point.
+                        A popular JavaScript library for creating interactive and responsive user interfaces with ease.
                     </p>
                 </a>
 
                 <!-- Card 3 -->
                 <a href="{{ route('framework') }}" class="flex flex-col items-center text-center">
                     <div class="bg-white rounded-xl w-70 h-70 flex items-center justify-center">
-                        <img src="{{ asset('images/tailwind logo.png') }}" alt="Tailwind CSS" class="h-60 ">
+                        <img src="{{ asset('images/frameworks/logos/Node.js.png') }}" alt="Tailwind CSS" class="h-60 ">
                     </div>
-                    <h3 class="text-lg font-semibold mt-4">Tailwind css</h3>
+                    <h3 class="text-lg font-semibold mt-4">Node JS</h3>
                     <p class="text-sm text-gray-400 max-w-xs mt-2">
-                        Body text for whatever you'd like to share more.
+                        A fast, lightweight JavaScript runtime for building scalable APIs and real-time applications.
                     </p>
                 </a>
             </div>
