@@ -164,9 +164,9 @@
                     </section>
                 @endforeach
             @else
-                <div class="empty-chapter">
-                    <p>Chapter ini belum memiliki konten. Silakan kembali lagi nanti!</p>
-                </div>
+                <section class="flex items-center justify-center min-h-[400px] bg-[#141414] text-gray-300 rounded-md">
+                    <p class="text-center text-base">Chapter ini belum memiliki konten. Silakan kembali lagi nanti!</p>
+                </section>
             @endif
 
 
